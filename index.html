@@ -1,117 +1,368 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Lê Bá Đức – Portfolio</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap' rel='stylesheet'><style>:root{--acc:#ea580c}
-*{margin:0;padding:0;box-sizing:border-box}
-img{max-width:100%}
-.container{max-width:1180px;margin:0 auto;padding:0 28px}
-.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px 40px}
-.skill span{font-size:.92rem;display:flex;justify-content:space-between}
-.skill em{font-style:normal;opacity:.65;font-size:.82rem}
-.bar{height:8px;border-radius:99px;background:rgba(128,128,128,.2);margin-top:7px;overflow:hidden}
-.bar i{display:block;height:100%;border-radius:99px;background:var(--acc);animation:grow 1.2s ease}
-@keyframes grow{from{width:0}}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chips span{padding:7px 18px;border-radius:999px;border:1px solid var(--acc);font-size:.88rem;opacity:.9}
-.tl{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--acc)}
-.tl-item{position:relative;margin-bottom:24px}
-.tl-item::before{content:"";position:absolute;left:-35px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px rgba(128,128,128,.12)}
-.tl-year{font-weight:700;color:var(--acc);font-size:1.02rem}
-.tl-item p{margin-top:4px;font-size:.95rem;opacity:.9}
-.quote{margin-top:16px;padding:14px 22px;border-left:4px solid var(--acc);font-style:italic;opacity:.92;font-size:1.02rem}
-.twocol{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
-@media(max-width:860px){.twocol{grid-template-columns:1fr}}
-.topnav{position:sticky;top:0;z-index:60;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
- padding:10px 60px 10px 16px;background:rgba(255,255,255,.78);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
-.topnav a{padding:6px 15px;border-radius:999px;font-size:.86rem;font-weight:600;color:inherit;text-decoration:none;opacity:.8}
-.topnav a:hover{background:var(--acc);color:#fff;opacity:1}
-.awgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:16px}
-@media(max-width:520px){.awgrid{grid-template-columns:1fr}}
-.award{display:flex;gap:16px;align-items:flex-start;border-left:5px solid var(--acc) !important;margin-bottom:0 !important}
-.medal{font-size:1.9rem;width:56px;height:56px;flex:0 0 56px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(128,128,128,.1)}
-.rk-gold{border-left-color:#f59e0b !important}.rk-gold .medal{background:linear-gradient(135deg,#fef3c7,#fcd34d)}
-.rk-silver{border-left-color:#94a3b8 !important}.rk-silver .medal{background:linear-gradient(135deg,#f1f5f9,#cbd5e1)}
-.rk-bronze{border-left-color:#c2703d !important}.rk-bronze .medal{background:linear-gradient(135deg,#fde8d7,#e8b48c)}
-.rk-merit{border-left-color:#818cf8 !important}.rk-merit .medal{background:linear-gradient(135deg,#e0e7ff,#c7d2fe)}
-.rklab{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;opacity:.75;margin-bottom:4px}
-.rk-gold .rklab{color:#b45309}.rk-silver .rklab{color:#64748b}.rk-bronze .rklab{color:#9a5b2d}.rk-merit .rklab{color:#6366f1}
-.awbody{flex:1}
-.awthumb{flex:0 0 92px;width:92px;height:92px;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.15);display:block}
-.awthumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
-.awthumb:hover img{transform:scale(1.12)}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-.subtitle{opacity:.65;font-size:.95rem;margin:-14px 0 20px}
-.lb{position:fixed;inset:0;background:rgba(8,8,12,.88);display:none;align-items:center;justify-content:center;z-index:300;cursor:zoom-out}
-.lb.open{display:flex}
-.lb img{max-width:93vw;max-height:92vh;border-radius:8px;box-shadow:0 20px 80px rgba(0,0,0,.6)}
-.pts{margin:12px 0 2px 20px;font-size:.93rem}
-.pts li{margin-bottom:7px;opacity:.92}
-.pts li::marker{color:var(--acc)}
-body.lay-split header .container{display:grid;grid-template-columns:auto 1fr;column-gap:48px;row-gap:2px;text-align:left;align-items:center;justify-items:start}
-body.lay-split header .avatar,body.lay-split header .monogram{grid-row:1/5;margin-bottom:0}
-body.lay-split header .stats{justify-content:flex-start;margin-top:22px}
-@media(max-width:760px){body.lay-split header .container{display:block;text-align:center}}
-body.aw-list .awgrid{grid-template-columns:1fr}
-body.aw-list .awthumb{flex:0 0 128px;width:128px;height:128px}
-body.act-zig .actwrap .card{width:94%}
-body.act-zig .actwrap .card:nth-child(even){margin-left:6%;border-left-width:6px;border-left-style:solid;border-left-color:var(--acc)}
-body.act-zig .actwrap .card:nth-child(odd){border-right:6px solid var(--acc)}
-section{padding:44px 0 6px}
-.stats{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px}
-.doclinks{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:14px}
-.gallery a{display:block;aspect-ratio:4/3;overflow:hidden}
-.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
-.gallery a:hover img{transform:scale(1.07)}
-.certgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.certimg{max-width:520px;width:100%;margin-top:14px}
-.avatar{width:132px;height:132px;border-radius:50%;object-fit:cover}
-.monogram{width:132px;height:132px;display:inline-flex;align-items:center;justify-content:center;font-size:44px;font-weight:700}
-.lang-switch{position:fixed;top:14px;right:14px;z-index:99;display:flex;gap:2px;border-radius:999px;padding:4px}
-.lbtn{border:0;background:transparent;padding:5px 14px;border-radius:999px;cursor:pointer;font-size:.85rem;font-weight:700}
-.pane-en{display:none}
-body.lang-en .pane-en{display:block}
-body.lang-en .pane-vi{display:none}
-footer{margin-top:56px;padding:28px 0;text-align:center;font-size:.85rem}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Le Ba Duc — Computer Engineering Portfolio</title>
+<meta name="description" content="Student portfolio of Le Ba Duc — HUS High School for Gifted Students. AI, computer vision and IoT. ICPC 2026 Gold &amp; Special Award, AIGC 2025 Gold, SAT 1590, IELTS 8.0.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
 
-body{font-family:'Inter',sans-serif;background:#fffaf5;color:#33261c;line-height:1.7;
- background-image:linear-gradient(rgba(234,88,12,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(234,88,12,.05) 1px,transparent 1px);
- background-size:48px 48px}
-h1,h2,h3,.stat b{font-family:'Space Grotesk',sans-serif}
-header{padding:88px 0 60px;text-align:center;position:relative;overflow:hidden;
- background:radial-gradient(ellipse 65% 85% at 50% -10%,rgba(234,88,12,.14),transparent 60%),
-            radial-gradient(ellipse 45% 60% at 88% 8%,rgba(14,116,144,.1),transparent 60%),
-            linear-gradient(180deg,#fff3e8,#fffaf5);border-bottom:1px solid #f3e2d1}
-.avatar{border:3px dashed #ea580c;padding:4px;background:#fff;box-shadow:0 10px 30px rgba(234,88,12,.22);margin-bottom:8px;border-radius:14px}
-.dtag{display:inline-block;font-family:'Space Grotesk',monospace;font-size:.72rem;background:#ea580c;color:#fff;
- padding:2px 10px;border-radius:4px;margin-bottom:16px;letter-spacing:1px}
-.monogram{border-radius:14px;background:#fff;color:#ea580c;border:3px dashed #ea580c;margin-bottom:20px}
-h1{font-size:3rem;color:#2c1c0e;letter-spacing:.5px}
-.school{color:#8a6a4e;margin-top:8px}
-.tagline{margin-top:16px;display:inline-block;background:#fff;border:1px solid #f0d9c3;color:#c2410c;
- padding:8px 22px;border-radius:8px;font-size:.95rem;box-shadow:0 5px 16px rgba(234,88,12,.1)}
-.stat{background:#fff;border:1px solid #f0d9c3;border-radius:12px;padding:16px 26px;min-width:170px;position:relative;box-shadow:0 6px 18px rgba(234,88,12,.07)}
-.stat::after{content:"";position:absolute;top:-1px;left:-1px;width:14px;height:14px;border-top:3px solid #ea580c;border-left:3px solid #ea580c;border-radius:4px 0 0 0}
-.stat b{display:block;font-size:1.7rem;color:#c2410c}
-.stat span{color:#96755a;font-size:.85rem}
-h2{font-size:1.55rem;margin-bottom:22px;color:#2c1c0e;display:flex;align-items:center;gap:12px}
-h2::before{content:"[";color:#ea580c;font-weight:700}
-h2::after{content:"]";color:#ea580c;font-weight:700}
-.card{background:#fff;border:1px solid #f0dfcd;border-radius:12px;padding:22px 24px;margin-bottom:16px;
- box-shadow:0 4px 16px rgba(51,38,28,.05);transition:border-color .2s,box-shadow .2s;position:relative}
-.card:hover{border-color:#ea580c;box-shadow:0 8px 26px rgba(234,88,12,.14)}
-.card h3{font-size:1.13rem;color:#7c2d12}
-.card .org{color:#96755a;font-size:.9rem}
-.card p{margin-top:10px;color:#5c4632;font-size:.95rem}
-.badge{display:inline-block;background:#ffedd5;color:#c2410c;border:1px solid #fed7aa;padding:2px 12px;border-radius:6px;font-size:.78rem;margin-bottom:8px}
-a{color:#c2410c;text-decoration:none}
-.doclinks a{background:#fff7ed;border:1px solid #f0d9c3;padding:6px 14px;border-radius:8px;font-size:.85rem}
-.doclinks a:hover{border-color:#ea580c}
-.gallery a{border-radius:10px;border:2px solid #f0dfcd;position:relative}
-.gallery a:hover{border-color:#ea580c;border-style:dashed}
-.research{border-left:4px solid #0e7490}
-.doi{font-family:Consolas,monospace;font-size:.85rem;color:#96755a}
-.empty{color:#a98a6d;font-style:italic;background:#fff;border:1px dashed #eed7bd;border-radius:12px;padding:18px 22px}
-footer{border-top:1px solid #f3e2d1;color:#a98a6d}
-.lang-switch{background:rgba(255,255,255,.92);border:1px solid #f0d9c3;box-shadow:0 4px 12px rgba(234,88,12,.1)}
-.lbtn{color:#96755a}.lbtn.active{background:#ea580c;color:#fff}
-.certimg{border-radius:10px;border:2px solid #f0dfcd}
-</style></head><body class='lay-split aw-grid act-zig'><div class='lang-switch'><button class='lbtn' data-l='en'>EN</button><button class='lbtn' data-l='vi'>VI</button></div><div class='pane-vi' lang='vi'><header><div class='container'><img class='avatar' src='assets/img/avatar.jpg' alt='Lê Bá Đức'><h1>Lê Bá Đức</h1><div class='school'>THPT Chuyên Khoa học Tự nhiên (HSGS) · Lớp 11 A2 Lý</div><div class='tagline'>Gold &amp; Special Award ICPC 2026 · HCV AIGC 2025 · Kỹ sư máy tính tương lai</div><div class='stats'><div class='stat'><b>9.3</b><span>GPA lớp 9–11</span></div><div class='stat'><b>1470</b><span>SAT</span></div><div class='stat'><b>8.0</b><span>IELTS</span></div></div></div></header><nav class='topnav'><a href='#about-vi'>Giới thiệu</a><a href='#awards-vi'>Thành tích</a><a href='#activities-vi'>Hoạt động</a><a href='#skills-vi'>Kỹ năng</a><a href='#journey-vi'>Hành trình</a><a href='#certs-vi'>Chứng chỉ</a></nav><main class='container'><section id='about-vi'><h2>Giới thiệu</h2><div class='card'><p style='margin-top:0'>Mình là Lê Bá Đức, học sinh lớp 11 A2 Lý, trường THPT Chuyên Khoa học Tự nhiên (HSGS), ĐHQG Hà Nội, định hướng ngành Kỹ thuật Máy tính và Kỹ thuật Điện. Mình đam mê Trí tuệ nhân tạo và Computer Vision: cùng nhóm đạt Gold &amp; Special Award tại ICPC 2026 (Hàn Quốc) với mô hình AI phát hiện sớm vấn đề sức khỏe tâm lý, Huy chương Vàng AIGC 2025, và tự phát triển hệ thống camera AI giám sát trang trại thông minh. Nền tảng học thuật của mình: GPA 9.3, SAT 1470, IELTS 8.0.</p><blockquote class='quote'>“Dạy máy nhìn thấy thế giới — để con người chăm sóc thế giới tốt hơn.”</blockquote></div></section><section id='awards-vi'><h2>Thành tích & Giải thưởng</h2><div class='awgrid'><div class='card award reveal rk-part'><div class='medal'>🏆</div><div class='awbody'><span class='rklab'>Thành tích</span><h3>Gold &amp; Special Award – International Creative Papers Conference &amp; Olympic (ICPC 2026), Hàn Quốc</h3><div class='org'>Đề tài “Broad-Spectrum Mental Health Detection: A Novel AI Model with Diverse Data Integration” · Korea University Invention Association · 01/2026</div></div><a class='awthumb' href='assets/img/award-gold-special-award-international-creative-papers-c.jpg'><img src='assets/img/award-gold-special-award-international-creative-papers-c.jpg' alt='Gold &amp; Special Award – International Creative Papers Conference &amp; Olympic (ICPC 2026), Hàn Quốc' loading='lazy'></a></div><div class='card award reveal rk-gold'><div class='medal'>🥇</div><div class='awbody'><span class='rklab'>Vàng · Gold</span><h3>Huy chương Vàng – AIGC 2025 (International Artificial Intelligence Generated Content Competition)</h3><div class='org'>Cuộc thi quốc tế về nội dung tạo bởi Trí tuệ nhân tạo</div></div><a class='awthumb' href='assets/img/award-huy-chuong-vang-aigc-2025-international-artificial.jpg'><img src='assets/img/award-huy-chuong-vang-aigc-2025-international-artificial.jpg' alt='Huy chương Vàng – AIGC 2025 (International Artificial Intelligence Generated Content Competition)' loading='lazy'></a></div></div></section><section id='activities-vi'><h2>Hoạt động ngoại khóa & Dự án</h2><div class='actwrap'><div class='card reveal'><h3>Sản phẩm cá nhân: Hệ thống camera AI giám sát trang trại lợn thông minh</h3><p>Thiết kế và phát triển hệ thống giám sát trang trại thông minh dùng camera AI, cảm biến IoT và công nghệ thị giác máy tính (YOLO): theo dõi hành vi vật nuôi, phát hiện hoạt động bất thường và hỗ trợ quản lý trang trại theo thời gian thực.</p><ul class='pts'><li>Camera AI là thiết bị trung tâm, hoạt động cả ngày lẫn đêm (hồng ngoại), vừa ghi hình vừa phân tích tư thế, vận động và hành vi của đàn lợn theo thời gian thực.</li><li>Phát hiện sớm dấu hiệu bất thường về sức khỏe: lợn nằm bất động quá lâu (ốm/tử vong), giảm hoạt động – ít ăn, hành vi lạ như cắn hoặc quẫy.</li><li>Tích hợp thêm cảm biến nhiệt độ, độ ẩm và khí độc (NH₃, CO₂) để đánh giá môi trường chuồng nuôi chính xác hơn.</li><li>Khi phát hiện bất thường: cảnh báo tại chỗ bằng đèn/còi và đẩy thông báo kèm hình ảnh lên Web/App để người chăn nuôi kiểm tra ngay.</li><li>Ý nghĩa thực tiễn: giảm tỷ lệ chết và thiệt hại kinh tế, tiết kiệm nhân công kiểm tra, góp phần xây dựng nông nghiệp thông minh với chi phí thấp, dễ triển khai ở trang trại nhỏ.</li></ul><div class='doclinks'><a href='assets/docs/ban-thiet-ke-he-thong-pdf.pdf'>📜 Bản thiết kế hệ thống (PDF)</a></div><div class='gallery'><a href='assets/img/act0-0.jpg'><img src='assets/img/act0-0.jpg' alt='Sản phẩm cá nhân: Hệ thống camera AI giám sát trang trại lợn thông minh' loading='lazy'></a><a href='assets/img/act0-1.jpg'><img src='assets/img/act0-1.jpg' alt='Sản phẩm cá nhân: Hệ thống camera AI giám sát trang trại lợn thông minh' loading='lazy'></a><a href='assets/img/act0-2.jpg'><img src='assets/img/act0-2.jpg' alt='Sản phẩm cá nhân: Hệ thống camera AI giám sát trang trại lợn thông minh' loading='lazy'></a></div></div><div class='card reveal'><h3>Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025</h3><p>Một số hình ảnh tham dự và nhận giải tại hai cuộc thi quốc tế.</p><div class='gallery'><a href='assets/img/act1-0.jpg'><img src='assets/img/act1-0.jpg' alt='Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-1.jpg'><img src='assets/img/act1-1.jpg' alt='Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-2.jpg'><img src='assets/img/act1-2.jpg' alt='Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-3.jpg'><img src='assets/img/act1-3.jpg' alt='Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-4.jpg'><img src='assets/img/act1-4.jpg' alt='Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-5.jpg'><img src='assets/img/act1-5.jpg' alt='Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-6.jpg'><img src='assets/img/act1-6.jpg' alt='Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-7.jpg'><img src='assets/img/act1-7.jpg' alt='Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025' loading='lazy'></a></div></div><div class='card reveal'><h3>Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)</h3><p>Tham gia thăm hỏi, tặng quà và tổ chức hoạt động cho các bệnh nhi đang điều trị tại Bệnh viện Nhi Trung ương, Hà Nội.</p><div class='gallery'><a href='assets/img/act2-0.jpg'><img src='assets/img/act2-0.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a><a href='assets/img/act2-1.jpg'><img src='assets/img/act2-1.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a><a href='assets/img/act2-2.jpg'><img src='assets/img/act2-2.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a><a href='assets/img/act2-3.jpg'><img src='assets/img/act2-3.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a><a href='assets/img/act2-4.jpg'><img src='assets/img/act2-4.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a><a href='assets/img/act2-5.jpg'><img src='assets/img/act2-5.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a><a href='assets/img/act2-6.jpg'><img src='assets/img/act2-6.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a><a href='assets/img/act2-7.jpg'><img src='assets/img/act2-7.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a><a href='assets/img/act2-8.jpg'><img src='assets/img/act2-8.jpg' alt='Thiện nguyện tại Bệnh viện Nhi Trung ương (2026)' loading='lazy'></a></div></div><div class='card reveal'><h3>Tình nguyện viên Làng trẻ em SOS (2025)</h3><p>Tham gia hoạt động tình nguyện, hỗ trợ giáo dục cho trẻ em tại Làng trẻ em SOS.</p><div class='doclinks'><a href='assets/docs/xac-nhan-lang-tre-sos.pdf'>📜 Xác nhận Làng trẻ SOS</a></div></div><div class='card reveal'><h3>Trải nghiệm ngoại khóa Tuyên Quang 2026</h3><p>Chuyến trải nghiệm ngoại khóa tại Tuyên Quang cùng học sinh nhiều trường: sinh hoạt chuyên đề tại hội trường, giao lưu và các hoạt động làm việc nhóm.</p><div class='gallery'><a href='assets/img/act4-0.jpg'><img src='assets/img/act4-0.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-1.jpg'><img src='assets/img/act4-1.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-2.jpg'><img src='assets/img/act4-2.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-3.jpg'><img src='assets/img/act4-3.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-4.jpg'><img src='assets/img/act4-4.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-5.jpg'><img src='assets/img/act4-5.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-6.jpg'><img src='assets/img/act4-6.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-7.jpg'><img src='assets/img/act4-7.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-8.jpg'><img src='assets/img/act4-8.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-9.jpg'><img src='assets/img/act4-9.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a><a href='assets/img/act4-10.jpg'><img src='assets/img/act4-10.jpg' alt='Trải nghiệm ngoại khóa Tuyên Quang 2026' loading='lazy'></a></div></div></div></section><div class='twocol'><section id='skills-vi'><h2>Kỹ năng</h2><div class='card reveal'><div class='skillgrid' style='grid-template-columns:1fr'><div class='skill'><span>Python<em>90%</em></span><div class='bar'><i style='width:90%'></i></div></div><div class='skill'><span>AI &amp; Computer Vision (YOLO)<em>88%</em></span><div class='bar'><i style='width:88%'></i></div></div><div class='skill'><span>IoT &amp; hệ thống nhúng<em>84%</em></span><div class='bar'><i style='width:84%'></i></div></div><div class='skill'><span>Thiết kế kỹ thuật<em>80%</em></span><div class='bar'><i style='width:80%'></i></div></div><div class='skill'><span>Tiếng Anh (IELTS 8.0)<em>88%</em></span><div class='bar'><i style='width:88%'></i></div></div></div><a href='assets/img/skill-radar.jpg'><img class='certimg' style='max-width:100%;margin-top:20px' src='assets/img/skill-radar.jpg' alt='skill radar' loading='lazy'></a></div></section><section><h2>Sở thích & Quan tâm</h2><div class='card'><div class='chips'><span>Trí tuệ nhân tạo</span><span>Computer Vision</span><span>Nông nghiệp thông minh</span><span>Kỹ thuật điện – điện tử</span><span>Thiện nguyện</span></div></div><h2 style='margin-top:26px'>Định hướng tương lai</h2><div class='card'><p style='margin-top:0'>Mình định hướng du học Singapore hoặc châu Âu ngành Kỹ thuật Máy tính / Kỹ thuật Điện. Mục tiêu gần là hoàn thiện hệ thống giám sát trang trại thông minh thành sản phẩm triển khai thực tế và phát triển tiếp mô hình AI phát hiện sớm vấn đề sức khỏe tâm lý đã đạt giải tại ICPC 2026.</p></div></section></div><section id='journey-vi'><h2>Hành trình</h2><div class='card reveal'><div class='tl'><div class='tl-item'><span class='tl-year'>2025</span><p>Huy chương Vàng AIGC 2025 – International Artificial Intelligence Generated Content Competition; tình nguyện viên tại Làng trẻ em SOS; phát triển hệ thống camera AI giám sát trang trại lợn thông minh.</p></div><div class='tl-item'><span class='tl-year'>2026</span><p>Gold &amp; Special Award tại ICPC 2026 (Hàn Quốc) với đề tài “Broad-Spectrum Mental Health Detection: A Novel AI Model with Diverse Data Integration”; đạt IELTS 8.0, SAT 1470; thiện nguyện tại Bệnh viện Nhi Trung ương.</p></div></div><a href='assets/img/journey-roadmap.jpg'><img class='certimg' style='max-width:100%;margin-top:14px' src='assets/img/journey-roadmap.jpg' alt='journey roadmap' loading='lazy'></a></div></section><section id='certs-vi'><h2>Chứng chỉ chuẩn hóa</h2><div class='certgrid'><div class='card'><h3>SAT 1470/1600</h3><p>Chứng chỉ chuẩn hóa phục vụ du học</p></div><div class='card'><h3>IELTS Academic 8.0</h3><p>Chứng chỉ tiếng Anh học thuật</p></div></div></section></main><footer>© 2026 Lê Bá Đức · Portfolio học sinh</footer></div><div class='pane-en' lang='en'><header><div class='container'><img class='avatar' src='assets/img/avatar.jpg' alt='Lê Bá Đức'><h1>Lê Bá Đức</h1><div class='school'>HUS High School for Gifted Students · Class 11A2 Physics</div><div class='tagline'>ICPC 2026 Gold &amp; Special Award · AIGC 2025 Gold · Future Computer Engineer</div><div class='stats'><div class='stat'><b>9.3</b><span>GPA (grades 9–11)</span></div><div class='stat'><b>1470</b><span>SAT score</span></div><div class='stat'><b>8.0</b><span>IELTS band</span></div></div></div></header><nav class='topnav'><a href='#about-en'>About</a><a href='#awards-en'>Awards</a><a href='#activities-en'>Activities</a><a href='#skills-en'>Skills</a><a href='#journey-en'>Journey</a><a href='#certs-en'>Tests</a></nav><main class='container'><section id='about-en'><h2>About Me</h2><div class='card'><p style='margin-top:0'>I am Le Ba Duc, a student of Class 11A2 Physics at HUS High School for Gifted Students (HSGS), VNU Hanoi, aiming for Computer Engineering and Electrical Engineering. I am passionate about AI and Computer Vision: my team won the Gold &amp; Special Award at ICPC 2026 in Korea with an AI model for broad-spectrum mental-health detection, I hold a Gold Medal from AIGC 2025, and I built an AI smart-farm camera monitoring system. Academics: GPA 9.3, SAT 1470, IELTS 8.0.</p><blockquote class='quote'>“Teach machines to see the world — so humans can care for it better.”</blockquote></div></section><section id='awards-en'><h2>Honors & Awards</h2><div class='awgrid'><div class='card award reveal rk-part'><div class='medal'>🏆</div><div class='awbody'><span class='rklab'>Achievement</span><h3>Gold &amp; Special Award – International Creative Papers Conference &amp; Olympic (ICPC 2026), Korea</h3><div class='org'>Project “Broad-Spectrum Mental Health Detection: A Novel AI Model with Diverse Data Integration” · Korea University Invention Association · Jan 2026</div></div><a class='awthumb' href='assets/img/award-gold-special-award-international-creative-papers-c.jpg'><img src='assets/img/award-gold-special-award-international-creative-papers-c.jpg' alt='Gold &amp; Special Award – International Creative Papers Conference &amp; Olympic (ICPC 2026), Korea' loading='lazy'></a></div><div class='card award reveal rk-gold'><div class='medal'>🥇</div><div class='awbody'><span class='rklab'>Gold</span><h3>Gold Medal – AIGC 2025 (International Artificial Intelligence Generated Content Competition)</h3><div class='org'>International competition on AI-generated content</div></div><a class='awthumb' href='assets/img/award-huy-chuong-vang-aigc-2025-international-artificial.jpg'><img src='assets/img/award-huy-chuong-vang-aigc-2025-international-artificial.jpg' alt='Gold Medal – AIGC 2025 (International Artificial Intelligence Generated Content Competition)' loading='lazy'></a></div></div></section><section id='activities-en'><h2>Extracurriculars & Projects</h2><div class='actwrap'><div class='card reveal'><h3>Personal project: AI smart pig-farm camera monitoring system</h3><p>Designed and developed a smart-farm monitoring system using AI cameras, IoT sensors and computer-vision technology (YOLO): tracking animal behaviour, detecting abnormal activities and supporting real-time farm management.</p><ul class='pts'><li>An AI camera is the core device, working day and night (infrared), simultaneously recording and analysing the herd&#x27;s posture, movement and behaviour in real time.</li><li>Early detection of abnormal health signs: pigs lying motionless too long (sick/dead), reduced activity and eating, unusual behaviours such as biting or thrashing.</li><li>Additional temperature, humidity and toxic-gas sensors (NH₃, CO₂) improve the assessment of the barn environment.</li><li>On detecting anomalies: on-site light/siren alerts plus instant notifications with images pushed to a Web/App for the farmer to check.</li><li>Practical impact: lower mortality and economic losses, less manual inspection labour, and a low-cost smart-farming solution deployable on small farms.</li></ul><div class='doclinks'><a href='assets/docs/ban-thiet-ke-he-thong-pdf.pdf'>📜 System design document (PDF)</a></div><div class='gallery'><a href='assets/img/act0-0.jpg'><img src='assets/img/act0-0.jpg' alt='Personal project: AI smart pig-farm camera monitoring system' loading='lazy'></a><a href='assets/img/act0-1.jpg'><img src='assets/img/act0-1.jpg' alt='Personal project: AI smart pig-farm camera monitoring system' loading='lazy'></a><a href='assets/img/act0-2.jpg'><img src='assets/img/act0-2.jpg' alt='Personal project: AI smart pig-farm camera monitoring system' loading='lazy'></a></div></div><div class='card reveal'><h3>Moments at ICPC 2026 &amp; AIGC 2025</h3><p>Photos from attending and receiving awards at the two international competitions.</p><div class='gallery'><a href='assets/img/act1-0.jpg'><img src='assets/img/act1-0.jpg' alt='Moments at ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-1.jpg'><img src='assets/img/act1-1.jpg' alt='Moments at ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-2.jpg'><img src='assets/img/act1-2.jpg' alt='Moments at ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-3.jpg'><img src='assets/img/act1-3.jpg' alt='Moments at ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-4.jpg'><img src='assets/img/act1-4.jpg' alt='Moments at ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-5.jpg'><img src='assets/img/act1-5.jpg' alt='Moments at ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-6.jpg'><img src='assets/img/act1-6.jpg' alt='Moments at ICPC 2026 &amp; AIGC 2025' loading='lazy'></a><a href='assets/img/act1-7.jpg'><img src='assets/img/act1-7.jpg' alt='Moments at ICPC 2026 &amp; AIGC 2025' loading='lazy'></a></div></div><div class='card reveal'><h3>Volunteering at the National Children&#x27;s Hospital (2026)</h3><p>Visited, gave gifts and organized activities for young patients at the National Children&#x27;s Hospital, Hanoi.</p><div class='gallery'><a href='assets/img/act2-0.jpg'><img src='assets/img/act2-0.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a><a href='assets/img/act2-1.jpg'><img src='assets/img/act2-1.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a><a href='assets/img/act2-2.jpg'><img src='assets/img/act2-2.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a><a href='assets/img/act2-3.jpg'><img src='assets/img/act2-3.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a><a href='assets/img/act2-4.jpg'><img src='assets/img/act2-4.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a><a href='assets/img/act2-5.jpg'><img src='assets/img/act2-5.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a><a href='assets/img/act2-6.jpg'><img src='assets/img/act2-6.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a><a href='assets/img/act2-7.jpg'><img src='assets/img/act2-7.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a><a href='assets/img/act2-8.jpg'><img src='assets/img/act2-8.jpg' alt='Volunteering at the National Children&#x27;s Hospital (2026)' loading='lazy'></a></div></div><div class='card reveal'><h3>SOS Children&#x27;s Village volunteer (2025)</h3><p>Volunteered in educational support activities for children at the SOS Children&#x27;s Village.</p><div class='doclinks'><a href='assets/docs/xac-nhan-lang-tre-sos.pdf'>📜 SOS Children&#x27;s Village confirmation</a></div></div><div class='card reveal'><h3>Tuyên Quang Excursion 2026</h3><p>An extracurricular excursion to Tuyên Quang with students from many schools: hall seminars, exchange sessions and team-building activities.</p><div class='gallery'><a href='assets/img/act4-0.jpg'><img src='assets/img/act4-0.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-1.jpg'><img src='assets/img/act4-1.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-2.jpg'><img src='assets/img/act4-2.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-3.jpg'><img src='assets/img/act4-3.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-4.jpg'><img src='assets/img/act4-4.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-5.jpg'><img src='assets/img/act4-5.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-6.jpg'><img src='assets/img/act4-6.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-7.jpg'><img src='assets/img/act4-7.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-8.jpg'><img src='assets/img/act4-8.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-9.jpg'><img src='assets/img/act4-9.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a><a href='assets/img/act4-10.jpg'><img src='assets/img/act4-10.jpg' alt='Tuyên Quang Excursion 2026' loading='lazy'></a></div></div></div></section><div class='twocol'><section id='skills-en'><h2>Skills</h2><div class='card reveal'><div class='skillgrid' style='grid-template-columns:1fr'><div class='skill'><span>Python<em>90%</em></span><div class='bar'><i style='width:90%'></i></div></div><div class='skill'><span>AI &amp; Computer Vision (YOLO)<em>88%</em></span><div class='bar'><i style='width:88%'></i></div></div><div class='skill'><span>IoT &amp; embedded systems<em>84%</em></span><div class='bar'><i style='width:84%'></i></div></div><div class='skill'><span>Engineering design<em>80%</em></span><div class='bar'><i style='width:80%'></i></div></div><div class='skill'><span>English (IELTS 8.0)<em>88%</em></span><div class='bar'><i style='width:88%'></i></div></div></div><a href='assets/img/skill-radar.jpg'><img class='certimg' style='max-width:100%;margin-top:20px' src='assets/img/skill-radar.jpg' alt='skill radar' loading='lazy'></a></div></section><section><h2>Interests</h2><div class='card'><div class='chips'><span>Artificial Intelligence</span><span>Computer Vision</span><span>Smart farming</span><span>Electrical engineering</span><span>Volunteering</span></div></div><h2 style='margin-top:26px'>Future Goals</h2><div class='card'><p style='margin-top:0'>I plan to study Computer Engineering / Electrical Engineering in Singapore or Europe. My near-term goals are to turn my smart-farm monitoring system into a deployable product and to further develop the mental-health early-detection AI model that won at ICPC 2026.</p></div></section></div><section id='journey-en'><h2>Journey</h2><div class='card reveal'><div class='tl'><div class='tl-item'><span class='tl-year'>2025</span><p>Gold Medal at AIGC 2025 – the International AI Generated Content Competition; volunteered at the SOS Children&#x27;s Village; developed an AI smart pig-farm camera monitoring system.</p></div><div class='tl-item'><span class='tl-year'>2026</span><p>Gold &amp; Special Award at ICPC 2026 in Korea for “Broad-Spectrum Mental Health Detection: A Novel AI Model with Diverse Data Integration”; scored IELTS 8.0 and SAT 1470; volunteered at the National Children&#x27;s Hospital.</p></div></div><a href='assets/img/journey-roadmap.jpg'><img class='certimg' style='max-width:100%;margin-top:14px' src='assets/img/journey-roadmap.jpg' alt='journey roadmap' loading='lazy'></a></div></section><section id='certs-en'><h2>Standardized Tests</h2><div class='certgrid'><div class='card'><h3>SAT 1470/1600</h3><p>Standardized test for study-abroad applications</p></div><div class='card'><h3>IELTS Academic 8.0</h3><p>Academic English proficiency</p></div></div></section></main><footer>© 2026 Lê Bá Đức · Student Portfolio</footer></div><script>function setLang(l,save){document.body.classList.toggle('lang-en',l==='en');document.documentElement.lang=l;if(save){try{localStorage.setItem('plang',l)}catch(e){}}document.querySelectorAll('.lbtn').forEach(function(b){b.classList.toggle('active',b.dataset.l===l)});}document.querySelectorAll('.lbtn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l,true)})});var saved='en';try{saved=localStorage.getItem('plang')||'en'}catch(e){}setLang(saved,false);var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});var lb=document.createElement('div');lb.className='lb';lb.innerHTML='<img>';document.body.appendChild(lb);lb.addEventListener('click',function(){lb.classList.remove('open')});document.querySelectorAll('.gallery a,.awthumb').forEach(function(a){a.addEventListener('click',function(ev){ev.preventDefault();lb.querySelector('img').src=a.getAttribute('href');lb.classList.add('open')})});</script></body></html>
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html" style="text-decoration:none;color:inherit">
+      <span class="mk">LBD</span>
+      <span>Lê Bá Đức<small>COMPUTER ENGINEERING</small></span>
+    </a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" id="burger">&#9776;</button>
+    <nav class="mainnav" id="nav">
+      <a href="#about"      ><span data-en>About</span><span data-vi>Giới thiệu</span></a>
+      <a href="#research"   ><span data-en>Research</span><span data-vi>Nghiên cứu</span></a>
+      <a href="#awards"     ><span data-en>Awards</span><span data-vi>Thành tích</span></a>
+      <a href="projects.html"><span data-en>Projects</span><span data-vi>Dự án</span></a>
+      <a href="#activities" ><span data-en>Activities</span><span data-vi>Ngoại khóa</span></a>
+      <a href="#skills"     ><span data-en>Skills</span><span data-vi>Kỹ năng</span></a>
+      <a href="#journey"    ><span data-en>Journey</span><span data-vi>Hành trình</span></a>
+      <a href="#contact"    ><span data-en>Contact</span><span data-vi>Liên hệ</span></a>
+    </nav>
+    <button class="langbtn" id="lang">EN</button>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <img class="avatar" src="assets/img/avatar.jpg" alt="Lê Bá Đức">
+    <div>
+      <span class="kicker">
+        <span data-en>Student portfolio &middot; Class of 2027</span><span data-vi>Hồ sơ học sinh &middot; Khóa 2027</span>
+      </span>
+      <h1>Lê Bá <em>Đức</em></h1>
+      <p class="role">
+        <span data-en>Physics-track student heading into <b>Computer &amp; Electrical Engineering</b>. I teach machines to see — from AI farm-monitoring cameras and smart parking systems to an early-detection model for mental-health risk.</span><span data-vi>Học sinh chuyên Lý định hướng <b>Kỹ thuật Máy tính &amp; Kỹ thuật Điện</b>. Mình dạy máy tính “nhìn” — từ camera AI giám sát trang trại, bãi đỗ xe thông minh, tới mô hình phát hiện sớm vấn đề sức khỏe tâm lý.</span>
+      </p>
+      <p class="school">
+        <span data-en>HUS High School for Gifted Students, VNU Hanoi &middot; Class 12 Physics 2</span><span data-vi>THPT Chuyên Khoa học Tự nhiên (HSGS), ĐHQG Hà Nội &middot; Lớp 12 Lý 2</span>
+      </p>
+      <div class="cta">
+        <a class="btn pri" href="projects.html"><span data-en>View projects &amp; research &rarr;</span><span data-vi>Xem dự án &amp; nghiên cứu &rarr;</span></a>
+        <a class="btn" href="https://ijmsm.org/ijmsm-v3i2p119.html" target="_blank" rel="noopener"><span data-en>Published paper</span><span data-vi>Bài báo đã công bố</span></a>
+        <a class="btn" href="mailto:baducthat@gmail.com">baducthat@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><b>1590</b><span>SAT</span></div>
+    <div class="stat"><b class="l">8.0</b><span>IELTS</span></div>
+    <div class="stat"><b>9.4</b><span data-en>GPA grade 11</span><span data-vi>GPA lớp 11</span></div>
+    <div class="stat"><b class="g">2</b><span data-en>Int'l gold medals</span><span data-vi>HCV quốc tế</span></div>
+    <div class="stat"><b class="l">1</b><span data-en>Published paper</span><span data-vi>Bài báo khoa học</span></div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow">01 &mdash; <span data-en>About</span><span data-vi>Giới thiệu</span></div>
+      <h2><span data-en>Who I am</span><span data-vi>Mình là ai</span></h2>
+    </div>
+    <div class="grid2">
+      <div class="card rv">
+        <p style="margin-top:0">
+          <span data-en>I am <b>Lê Bá Đức</b>, a <b>grade 12 Physics 2</b> student at HUS High School for Gifted Students, VNU Hanoi. I am pursuing <b>Computer / Electrical Engineering</b>, focused on artificial intelligence, computer vision and embedded IoT systems.</span><span data-vi>Mình là <b>Lê Bá Đức</b>, học sinh lớp <b>12 Lý 2</b>, trường THPT Chuyên Khoa học Tự nhiên (HSGS) &mdash; ĐHQG Hà Nội. Mình theo đuổi <b>Kỹ thuật Máy tính / Kỹ thuật Điện</b>, với trọng tâm là Trí tuệ nhân tạo, Thị giác máy tính và hệ thống IoT nhúng.</span>
+        </p>
+        <p>
+          <span data-en>What I love about engineering is the distance between a line of code and a real problem: one camera can save a farmer's whole herd; one model can spot a mental-health crisis before it is too late. For three years that distance has been my motivation to learn.</span><span data-vi>Điều mình thích nhất ở kỹ thuật là khoảng cách giữa một dòng code và một vấn đề thật: một chiếc camera có thể cứu cả đàn lợn của người nông dân; một mô hình AI có thể nhận ra dấu hiệu khủng hoảng tâm lý trước khi quá muộn. Ba năm qua mình dùng chính khoảng cách đó làm động lực học.</span>
+        </p>
+        <div class="quote">
+          <span data-en>&ldquo;Teach machines to see the world &mdash; so people can care for it better.&rdquo;</span><span data-vi>&ldquo;Dạy máy nhìn thấy thế giới &mdash; để con người chăm sóc thế giới tốt hơn.&rdquo;</span>
+        </div>
+      </div>
+      <div class="card rv">
+        <h3><span data-en>Profile at a glance</span><span data-vi>Thông tin hồ sơ</span></h3>
+        <ul style="list-style:none;margin-left:0">
+          <li><span class="meta" data-vi>Ngày sinh</span><span class="meta" data-en>Date of birth</span><br>05/11/2009</li>
+          <li><span class="meta" data-vi>Trường &amp; lớp</span><span class="meta" data-en>School &amp; class</span><br><span data-en>HUS Gifted High School &mdash; 12 Physics 2</span><span data-vi>THPT Chuyên KHTN (HSGS) &mdash; 12 Lý 2</span></li>
+          <li><span class="meta" data-vi>Ngành định hướng</span><span class="meta" data-en>Intended major</span><br>Computer Engineering / Electrical Engineering</li>
+          <li><span class="meta" data-vi>Quốc gia dự tuyển</span><span class="meta" data-en>Target countries</span><br><span data-en>Singapore, Netherlands, Finland</span><span data-vi>Singapore, Hà Lan, Phần Lan</span></li>
+          <li><span class="meta">GPA</span><br><span data-en>Grade 10: 9.3 &middot; Grade 11: 9.4</span><span data-vi>Lớp 10: 9.3 &middot; Lớp 11: 9.4</span></li>
+          <li><span class="meta" data-vi>Chuẩn hóa</span><span class="meta" data-en>Standardized</span><br>SAT 1590 &middot; IELTS Academic 8.0</li>
+          <li><span class="meta" data-vi>Vai trò</span><span class="meta" data-en>Role</span><br><span data-en>Team leader, research &amp; product team</span><span data-vi>Team Leader nhóm nghiên cứu &amp; sản phẩm</span></li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>YOLO</span><span>OpenCV</span><span>PyTorch</span><span>Arduino / ESP32</span><span>C++</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section id="research">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow">02 &mdash; <span data-en>Research</span><span data-vi>Nghiên cứu khoa học</span></div>
+      <h2><span data-en>Published research</span><span data-vi>Bài báo đã công bố</span></h2>
+      <p class="lead">
+        <span data-en>One peer-reviewed international journal article, written across grades 11&ndash;12 under academic supervision.</span><span data-vi>Một bài báo trên tạp chí quốc tế bình duyệt, viết trong năm lớp 11&ndash;12 dưới hướng dẫn chuyên môn.</span>
+      </p>
+    </div>
+    <div class="card rv" style="border-left:3px solid var(--lime)">
+      <div class="meta">IJMSM &middot; Golden Sun-Rise International Journal of Multidisciplinary on Science and Management &middot; Vol. 3, Issue 2 (Apr&ndash;Jun 2026), pp. 163&ndash;168 &middot; 26/05/2026</div>
+      <h3 style="margin-top:8px">
+        Applications of AI and IoT to Develop Intelligent Car Parking Systems in Hanoi, Vietnam
+      </h3>
+      <p>
+        <span data-en>The paper sets out IoT and AI solutions for intelligent parking in Hanoi: ultrasonic and geomagnetic sensors detect occupancy and stream real-time data to a central server; OpenCV-based computer vision handles plate recognition and surveillance; RFID automates entry and exit; and a mobile app lets drivers reserve a bay and navigate to it.<br><br><b>Authors:</b> Lam An Binh, <b>Le Ba Duc</b>, Nguyen Do Anh Dung, Duong Tuan Dung, Nguyen Anh Kiet, Vu Xuan Manh &mdash; I am a <b>co-author (second of six)</b>.</span><span data-vi>Bài báo trình bày giải pháp ứng dụng IoT và trí tuệ nhân tạo cho hệ thống bãi đỗ xe thông minh tại Hà Nội: cảm biến siêu âm và địa từ phát hiện ô trống và gửi dữ liệu thời gian thực về máy chủ; thuật toán thị giác máy tính trên nền OpenCV nhận diện biển số và giám sát an ninh; RFID tự động hóa cổng vào &mdash; ra; ứng dụng di động cho phép tài xế đặt chỗ trước và dẫn đường tới ô trống.<br><br><b>Nhóm tác giả:</b> Lam An Binh, <b>Le Ba Duc</b>, Nguyen Do Anh Dung, Duong Tuan Dung, Nguyen Anh Kiet, Vu Xuan Manh &mdash; mình là <b>đồng tác giả (tác giả thứ 2 trong 6)</b>.</span>
+      </p>
+      <div class="tags">
+        <span>Computer Vision</span><span>ANPR</span><span>Deep Learning</span><span>Smart City</span><span data-en>Peer reviewed</span><span data-vi>Bình duyệt</span><span>DOI 10.71141/30485037/V3I2P119</span>
+      </div>
+      <p style="margin-top:16px">
+        <a class="btn" href="https://ijmsm.org/ijmsm-v3i2p119.html" target="_blank" rel="noopener">
+          <span data-en>Read the paper on IJMSM &rarr;</span><span data-vi>Đọc bài báo trên IJMSM &rarr;</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AWARDS ================= -->
+<section id="awards">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow">03 &mdash; <span data-en>Honors</span><span data-vi>Thành tích</span></div>
+      <h2><span data-en>International awards</span><span data-vi>Giải thưởng quốc tế</span></h2>
+    </div>
+    <div class="grid2" style="align-items:start">
+      <div class="award sp rv">
+        <div class="medal">&#127942;</div>
+        <div>
+          <div class="rank">Gold &amp; Special Award</div>
+          <h3 style="margin-top:4px">ICPC 2026 &mdash; International Creative Papers Conference &amp; Olympic</h3>
+          <p><span data-en>Project <i>&ldquo;Broad-Spectrum Mental Health Detection: A Novel AI Model with Diverse Data Integration&rdquo;</i> &mdash; a multi-source AI model for early detection of mental-health risk. Gold medal plus Special Award.</span><span data-vi>Đề tài <i>&ldquo;Broad-Spectrum Mental Health Detection: A Novel AI Model with Diverse Data Integration&rdquo;</i> &mdash; mô hình AI tích hợp nhiều nguồn dữ liệu để phát hiện sớm nguy cơ sức khỏe tâm lý. Giải Vàng kèm Giải đặc biệt.</span></p>
+          <div class="meta" style="margin-top:8px">Korea University Invention Association &middot; 01/2026 &middot; <span data-en>South Korea</span><span data-vi>Hàn Quốc</span></div>
+          <div style="margin-top:14px;max-width:320px"><img src="assets/img/award-gold-special-award-international-creative-papers-c.jpg" alt="ICPC 2026" style="border-radius:10px;border:1px solid var(--line);width:100%;height:240px;object-fit:cover;object-position:top"></div>
+        </div>
+      </div>
+      <div class="award rv">
+        <div class="medal">&#129351;</div>
+        <div>
+          <div class="rank"><span data-en>Gold medal</span><span data-vi>Huy chương Vàng</span></div>
+          <h3 style="margin-top:4px">AIGC 2025 &mdash; International AI Generated Content Competition</h3>
+          <p><span data-en>Gold medal for <i>&ldquo;Application of AI and Smart Sensors in Household Water Safety Monitoring and Alert System&rdquo;</i> &mdash; smart sensors combined with AI to monitor and raise alerts on household water safety. Awarded in Singapore on 4 May 2025.</span><span data-vi>Huy chương Vàng với đề tài <i>&ldquo;Application of AI and Smart Sensors in Household Water Safety Monitoring and Alert System&rdquo;</i> &mdash; hệ thống cảm biến thông minh kết hợp AI để theo dõi và cảnh báo an toàn nước sinh hoạt trong gia đình. Lễ trao giải tại Singapore, 04/05/2025.</span></p>
+          <div class="meta" style="margin-top:8px">Advanced Innovation Global Competition &middot; 05/2025 &middot; Singapore</div>
+          <div style="margin-top:14px;max-width:320px"><img src="assets/img/award-huy-chuong-vang-aigc-2025-international-artificial.jpg" alt="AIGC 2025" style="border-radius:10px;border:1px solid var(--line);width:100%;height:240px;object-fit:cover;object-position:top"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card rv" style="margin-top:20px">
+      <h3><span data-en>Moments at ICPC 2026 &amp; AIGC 2025</span><span data-vi>Khoảnh khắc tại ICPC 2026 &amp; AIGC 2025</span></h3>
+      <p><span data-en>Photos from attending, presenting and receiving awards at both competitions. Click any photo to enlarge.</span><span data-vi>Hình ảnh tham dự, trình bày và nhận giải tại hai cuộc thi quốc tế. Bấm vào ảnh để xem lớn.</span></p>
+      <div class='gal'><a href='assets/img/act1-0.jpg' data-lb><img src='assets/img/act1-0.jpg' alt='ICPC 2026 / AIGC 2025 1' loading='lazy'></a><a href='assets/img/act1-1.jpg' data-lb><img src='assets/img/act1-1.jpg' alt='ICPC 2026 / AIGC 2025 2' loading='lazy'></a><a href='assets/img/act1-2.jpg' data-lb><img src='assets/img/act1-2.jpg' alt='ICPC 2026 / AIGC 2025 3' loading='lazy'></a><a href='assets/img/act1-3.jpg' data-lb><img src='assets/img/act1-3.jpg' alt='ICPC 2026 / AIGC 2025 4' loading='lazy'></a><a href='assets/img/act1-4.jpg' data-lb><img src='assets/img/act1-4.jpg' alt='ICPC 2026 / AIGC 2025 5' loading='lazy'></a><a href='assets/img/act1-5.jpg' data-lb><img src='assets/img/act1-5.jpg' alt='ICPC 2026 / AIGC 2025 6' loading='lazy'></a><a href='assets/img/act1-6.jpg' data-lb><img src='assets/img/act1-6.jpg' alt='ICPC 2026 / AIGC 2025 7' loading='lazy'></a><a href='assets/img/act1-7.jpg' data-lb><img src='assets/img/act1-7.jpg' alt='ICPC 2026 / AIGC 2025 8' loading='lazy'></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT TEASER ================= -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow">04 &mdash; <span data-en>Projects</span><span data-vi>Dự án</span></div>
+      <h2><span data-en>Personal engineering work</span><span data-vi>Sản phẩm cá nhân</span></h2>
+      <p class="lead"><span data-en>Three engineering projects I designed and built. The projects page has the full architecture, hardware and results.</span><span data-vi>Ba dự án kỹ thuật mình trực tiếp thiết kế và xây dựng. Trang dự án có mô tả đầy đủ kiến trúc, linh kiện và kết quả.</span></p>
+    </div>
+    <div class="grid3">
+      <div class="card rv">
+        <div class="meta">2025 &ndash; 2026 &middot; <span data-en>Flagship</span><span data-vi>Sản phẩm chính</span></div>
+        <h3 style="margin-top:6px"><span data-en>AI pig-barn monitoring camera</span><span data-vi>Camera AI giám sát chuồng lợn</span></h3>
+        <p><span data-en>Infrared camera + YOLO tracking herd posture and behaviour 24/7, with early alerts on signs of illness.</span><span data-vi>Camera hồng ngoại + YOLO theo dõi tư thế và hành vi đàn lợn 24/7, cảnh báo sớm khi có dấu hiệu bệnh.</span></p>
+        <div class="tags"><span>YOLO</span><span>IoT</span><span>ESP32</span></div>
+        <p><a href="projects.html#farm"><span data-en>Details &rarr;</span><span data-vi>Chi tiết &rarr;</span></a></p>
+      </div>
+      <div class="card rv">
+        <div class="meta">2026 &middot; <span data-en>Research</span><span data-vi>Nghiên cứu</span></div>
+        <h3 style="margin-top:6px"><span data-en>Smart parking system</span><span data-vi>Bãi đỗ xe thông minh</span></h3>
+        <p><span data-en>Plate and free-bay recognition with computer vision; published in the international journal IJMSM.</span><span data-vi>Nhận diện biển số và chỗ trống bằng thị giác máy tính; đã công bố trên tạp chí quốc tế IJMSM.</span></p>
+        <div class="tags"><span>ANPR</span><span>OpenCV</span><span data-en>Published</span><span data-vi>Đã công bố</span></div>
+        <p><a href="projects.html#parking"><span data-en>Details &rarr;</span><span data-vi>Chi tiết &rarr;</span></a></p>
+      </div>
+      <div class="card rv">
+        <div class="meta">2026 &middot; ICPC Gold</div>
+        <h3 style="margin-top:6px"><span data-en>Mental-health risk detection</span><span data-vi>Phát hiện sớm rủi ro tâm lý</span></h3>
+        <p><span data-en>Multi-source AI model, awarded Gold &amp; Special Award at ICPC 2026.</span><span data-vi>Mô hình AI tích hợp dữ liệu đa nguồn, đạt Gold &amp; Special Award ICPC 2026.</span></p>
+        <div class="tags"><span>PyTorch</span><span>NLP</span><span>Multimodal</span></div>
+        <p><a href="projects.html#mental"><span data-en>Details &rarr;</span><span data-vi>Chi tiết &rarr;</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACTIVITIES ================= -->
+<section id="activities">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow">05 &mdash; <span data-en>Service &amp; leadership</span><span data-vi>Ngoại khóa &amp; cộng đồng</span></div>
+      <h2><span data-en>Community work</span><span data-vi>Hoạt động cộng đồng</span></h2>
+      <p class="lead"><span data-en>Three volunteer programmes over two years, alongside team-lead roles on engineering projects.</span><span data-vi>Ba chương trình thiện nguyện trong hai năm, cùng vai trò trưởng nhóm ở các dự án kỹ thuật.</span></p>
+    </div>
+
+    <div class="card rv">
+      <div class="meta">2026</div>
+      <h3 style="margin-top:6px"><span data-en>Volunteering at the National Children's Hospital</span><span data-vi>Thiện nguyện tại Bệnh viện Nhi Trung ương</span></h3>
+      <p><span data-en>Visiting, bringing gifts and running play activities for children in long-term treatment at the National Children's Hospital, Hanoi.</span><span data-vi>Thăm hỏi, tặng quà và tổ chức hoạt động vui chơi cho các bệnh nhi đang điều trị dài ngày tại Bệnh viện Nhi Trung ương, Hà Nội.</span></p>
+      <div class='gal'><a href='assets/img/act2-0.jpg' data-lb><img src='assets/img/act2-0.jpg' alt='Benh vien Nhi Trung uong 1' loading='lazy'></a><a href='assets/img/act2-1.jpg' data-lb><img src='assets/img/act2-1.jpg' alt='Benh vien Nhi Trung uong 2' loading='lazy'></a><a href='assets/img/act2-2.jpg' data-lb><img src='assets/img/act2-2.jpg' alt='Benh vien Nhi Trung uong 3' loading='lazy'></a><a href='assets/img/act2-3.jpg' data-lb><img src='assets/img/act2-3.jpg' alt='Benh vien Nhi Trung uong 4' loading='lazy'></a><a href='assets/img/act2-4.jpg' data-lb><img src='assets/img/act2-4.jpg' alt='Benh vien Nhi Trung uong 5' loading='lazy'></a><a href='assets/img/act2-5.jpg' data-lb><img src='assets/img/act2-5.jpg' alt='Benh vien Nhi Trung uong 6' loading='lazy'></a><a href='assets/img/act2-6.jpg' data-lb><img src='assets/img/act2-6.jpg' alt='Benh vien Nhi Trung uong 7' loading='lazy'></a><a href='assets/img/act2-7.jpg' data-lb><img src='assets/img/act2-7.jpg' alt='Benh vien Nhi Trung uong 8' loading='lazy'></a><a href='assets/img/act2-8.jpg' data-lb><img src='assets/img/act2-8.jpg' alt='Benh vien Nhi Trung uong 9' loading='lazy'></a></div>
+    </div>
+
+    <div class="card rv" style="margin-top:18px">
+      <div class="meta">2026</div>
+      <h3 style="margin-top:6px"><span data-en>Green Horizons project &mdash; Tuyên Quang</span><span data-vi>Dự án Green Horizons &mdash; Tuyên Quang</span></h3>
+      <p><span data-en>Volunteer work and thematic sessions with the Green Horizons project in Tuyên Quang: team work with students from several schools, exchange sessions and local community activities.</span><span data-vi>Tham gia công tác thiện nguyện và sinh hoạt chuyên đề trong dự án Green Horizons tại Tuyên Quang: làm việc nhóm với học sinh nhiều trường, giao lưu và triển khai hoạt động cộng đồng tại địa phương.</span></p>
+      <div class='gal'><a href='assets/img/act4-0.jpg' data-lb><img src='assets/img/act4-0.jpg' alt='Green Horizons Tuyen Quang 1' loading='lazy'></a><a href='assets/img/act4-1.jpg' data-lb><img src='assets/img/act4-1.jpg' alt='Green Horizons Tuyen Quang 2' loading='lazy'></a><a href='assets/img/act4-2.jpg' data-lb><img src='assets/img/act4-2.jpg' alt='Green Horizons Tuyen Quang 3' loading='lazy'></a><a href='assets/img/act4-3.jpg' data-lb><img src='assets/img/act4-3.jpg' alt='Green Horizons Tuyen Quang 4' loading='lazy'></a><a href='assets/img/act4-4.jpg' data-lb><img src='assets/img/act4-4.jpg' alt='Green Horizons Tuyen Quang 5' loading='lazy'></a><a href='assets/img/act4-5.jpg' data-lb><img src='assets/img/act4-5.jpg' alt='Green Horizons Tuyen Quang 6' loading='lazy'></a><a href='assets/img/act4-6.jpg' data-lb><img src='assets/img/act4-6.jpg' alt='Green Horizons Tuyen Quang 7' loading='lazy'></a><a href='assets/img/act4-7.jpg' data-lb><img src='assets/img/act4-7.jpg' alt='Green Horizons Tuyen Quang 8' loading='lazy'></a><a href='assets/img/act4-8.jpg' data-lb><img src='assets/img/act4-8.jpg' alt='Green Horizons Tuyen Quang 9' loading='lazy'></a><a href='assets/img/act4-9.jpg' data-lb><img src='assets/img/act4-9.jpg' alt='Green Horizons Tuyen Quang 10' loading='lazy'></a><a href='assets/img/act4-10.jpg' data-lb><img src='assets/img/act4-10.jpg' alt='Green Horizons Tuyen Quang 11' loading='lazy'></a></div>
+    </div>
+
+    <div class="grid2" style="margin-top:18px">
+      <div class="card rv">
+        <div class="meta">2025</div>
+        <h3 style="margin-top:6px"><span data-en>SOS Children's Village volunteer</span><span data-vi>Tình nguyện viên Làng trẻ em SOS</span></h3>
+        <p><span data-en>Supporting education and daily activities for children at SOS Children's Village, Hanoi.</span><span data-vi>Hỗ trợ hoạt động giáo dục và sinh hoạt cho trẻ em tại Làng trẻ em SOS Hà Nội.</span></p>
+        <p style="margin-top:14px"><a class="btn" href="assets/docs/xac-nhan-lang-tre-sos.pdf" target="_blank" rel="noopener"><span data-en>Confirmation letter (PDF)</span><span data-vi>Giấy xác nhận (PDF)</span></a></p>
+      </div>
+      <div class="card rv" style="border-left:3px solid var(--violet)">
+        <div class="meta">2025 &ndash; 2026</div>
+        <h3 style="margin-top:6px"><span data-en>Leadership &mdash; team leader</span><span data-vi>Leadership &mdash; Team Leader</span></h3>
+        <p><span data-en>Team leader on research and product projects: assigning work, tracking milestones, consolidating reports and presenting to judging panels at international competitions.</span><span data-vi>Trưởng nhóm cho các dự án nghiên cứu và sản phẩm cá nhân: phân chia công việc, quản lý tiến độ, tổng hợp báo cáo và trình bày trước ban giám khảo tại các cuộc thi quốc tế.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow">06 &mdash; <span data-en>Skills</span><span data-vi>Kỹ năng</span></div>
+      <h2><span data-en>Technical profile</span><span data-vi>Năng lực kỹ thuật</span></h2>
+    </div>
+    <div class="skills rv">
+      <div class="sk"><div class="row"><span>Python</span><em>90%</em></div><div class="bar"><i style="width:90%"></i></div></div>
+      <div class="sk"><div class="row"><span data-en>AI &amp; computer vision (YOLO)</span><span data-vi>AI &amp; Thị giác máy tính (YOLO)</span><em>88%</em></div><div class="bar"><i style="width:88%"></i></div></div>
+      <div class="sk"><div class="row"><span data-en>IoT &amp; embedded systems</span><span data-vi>IoT &amp; hệ thống nhúng</span><em>84%</em></div><div class="bar"><i style="width:84%"></i></div></div>
+      <div class="sk"><div class="row"><span data-en>Engineering &amp; circuit design</span><span data-vi>Thiết kế kỹ thuật &amp; mạch điện</span><em>82%</em></div><div class="bar"><i style="width:82%"></i></div></div>
+      <div class="sk"><div class="row"><span data-en>Academic writing</span><span data-vi>Viết báo khoa học</span><em>80%</em></div><div class="bar"><i style="width:80%"></i></div></div>
+      <div class="sk"><div class="row"><span data-en>English (IELTS 8.0)</span><span data-vi>Tiếng Anh (IELTS 8.0)</span><em>88%</em></div><div class="bar"><i style="width:88%"></i></div></div>
+    </div>
+    <div style="margin-top:34px" class="rv">
+      <h3 style="margin-bottom:14px"><span data-en>Interests &amp; direction</span><span data-vi>Quan tâm &amp; định hướng</span></h3>
+      <div class="chips">
+        <span data-en>Artificial intelligence</span><span data-vi>Trí tuệ nhân tạo</span>
+        <span>Computer Vision</span>
+        <span data-en>Smart agriculture</span><span data-en>Electrical engineering</span><span data-en>Smart cities</span><span data-en>Volunteering</span><span data-vi>Nông nghiệp thông minh</span><span data-vi>Kỹ thuật điện &ndash; điện tử</span><span data-vi>Thành phố thông minh</span><span data-vi>Thiện nguyện</span>
+      </div>
+      <p class="lead" style="margin-top:18px">
+        <span data-en>My goal is to study Computer / Electrical Engineering in Singapore, the Netherlands or Finland; to turn the farm-monitoring system into a deployed product, and to keep developing the mental-health detection model that won at ICPC 2026.</span><span data-vi>Mục tiêu của mình là theo học Kỹ thuật Máy tính / Kỹ thuật Điện tại Singapore, Hà Lan hoặc Phần Lan; đưa hệ thống giám sát trang trại thành sản phẩm triển khai thật, và phát triển tiếp mô hình phát hiện sớm rủi ro tâm lý đã đạt giải tại ICPC 2026.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section id="journey">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow">07 &mdash; <span data-en>Journey</span><span data-vi>Hành trình</span></div>
+      <h2><span data-en>Three years of high school</span><span data-vi>Ba năm cấp ba</span></h2>
+    </div>
+    <div class="tl rv">
+      <div class="it">
+        <div class="yr">2024 &ndash; 2025</div>
+        <h3><span data-en>Foundations &amp; first international medal</span><span data-vi>Nền tảng &amp; giải quốc tế đầu tiên</span></h3>
+        <p><span data-en>Entered the HSGS physics track with a 9.3 GPA in grade 10. Won gold at AIGC 2025. Began volunteering at SOS Children's Village and started the AI farm-monitoring system.</span><span data-vi>Vào lớp chuyên Lý HSGS, GPA lớp 10 đạt 9.3. Giành Huy chương Vàng AIGC 2025. Bắt đầu tình nguyện tại Làng trẻ em SOS và khởi động hệ thống camera AI giám sát trang trại.</span></p>
+      </div>
+      <div class="it">
+        <div class="yr">2025 &ndash; 2026</div>
+        <h3><span data-en>Research, gold &amp; test scores</span><span data-vi>Nghiên cứu, giải Vàng &amp; điểm chuẩn hóa</span></h3>
+        <p><span data-en>9.4 GPA in grade 11. Gold &amp; Special Award at ICPC 2026 in South Korea. Completed and published the smart-parking paper in IJMSM. Scored IELTS 8.0 and SAT 1590. Volunteered at the National Children's Hospital and the Green Horizons project in Tuyên Quang.</span><span data-vi>GPA lớp 11 đạt 9.4. Gold &amp; Special Award tại ICPC 2026 (Hàn Quốc). Hoàn thiện và công bố bài báo về hệ thống bãi đỗ xe thông minh trên IJMSM. Đạt IELTS 8.0 và SAT 1590. Thiện nguyện tại Bệnh viện Nhi Trung ương và dự án Green Horizons Tuyên Quang.</span></p>
+      </div>
+      <div class="it">
+        <div class="yr">2026 &ndash; 2027</div>
+        <h3><span data-en>Grade 12 &amp; university applications</span><span data-vi>Lớp 12 &amp; ứng tuyển đại học</span></h3>
+        <p><span data-en>Grade 12 Physics 2. Completing applications for Computer / Electrical Engineering in Singapore, the Netherlands and Finland; continuing product development and team-lead work.</span><span data-vi>Lớp 12 Lý 2. Hoàn thiện hồ sơ ứng tuyển ngành Kỹ thuật Máy tính / Kỹ thuật Điện tại Singapore, Hà Lan và Phần Lan; tiếp tục phát triển sản phẩm cá nhân và vai trò trưởng nhóm.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTS ================= -->
+<section id="tests">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="eyebrow">08 &mdash; <span data-en>Standardized</span><span data-vi>Chuẩn hóa</span></div>
+      <h2><span data-en>Scores &amp; academics</span><span data-vi>Điểm &amp; học lực</span></h2>
+    </div>
+    <div class="grid3">
+      <div class="card rv"><div class="meta">SAT</div><h3 style="margin-top:4px">1590 / 1600</h3><p><span data-en>Standardized admissions test.</span><span data-vi>Bài thi chuẩn hóa dùng cho tuyển sinh quốc tế.</span></p></div>
+      <div class="card rv"><div class="meta">IELTS Academic</div><h3 style="margin-top:4px">8.0</h3><p><span data-en>Academic English proficiency.</span><span data-vi>Chứng chỉ tiếng Anh học thuật.</span></p></div>
+      <div class="card rv"><div class="meta">GPA</div><h3 style="margin-top:4px">9.3 &middot; 9.4</h3><p><span data-en>Grade 10 and grade 11 averages at a selective school.</span><span data-vi>Điểm trung bình lớp 10 và lớp 11 tại trường chuyên.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4><span data-en>Contact</span><span data-vi>Liên hệ</span></h4>
+        <h3 style="font-size:1.4rem"><span data-en>Thank you for reading my portfolio.</span><span data-vi>Cảm ơn bạn đã ghé xem hồ sơ của mình.</span></h3>
+        <p style="color:var(--mute);margin-top:10px;font-size:.95rem">
+          <span data-en>I am always glad to talk about AI, computer vision or engineering projects for the community.</span><span data-vi>Mình luôn vui khi được trao đổi về AI, thị giác máy tính hoặc các dự án kỹ thuật cho cộng đồng.</span>
+        </p>
+        <p style="margin-top:14px"><a class="btn pri" href="mailto:baducthat@gmail.com">baducthat@gmail.com</a></p>
+      </div>
+      <div>
+        <h4><span data-en>Pages</span><span data-vi>Trang</span></h4>
+        <ul>
+          <li><a href="#about"><span data-en>About</span><span data-vi>Giới thiệu</span></a></li>
+          <li><a href="#research"><span data-en>Research</span><span data-vi>Nghiên cứu</span></a></li>
+          <li><a href="#awards"><span data-en>Awards</span><span data-vi>Thành tích</span></a></li>
+          <li><a href="projects.html"><span data-en>Projects</span><span data-vi>Dự án</span></a></li>
+          <li><a href="#activities"><span data-en>Activities</span><span data-vi>Ngoại khóa</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-en>Documents</span><span data-vi>Tài liệu</span></h4>
+        <ul>
+          <li><a href="https://ijmsm.org/ijmsm-v3i2p119.html" target="_blank" rel="noopener"><span data-en>IJMSM paper</span><span data-vi>Bài báo IJMSM</span></a></li>
+          <li><a href="assets/docs/ban-thiet-ke-he-thong-pdf.pdf" target="_blank" rel="noopener"><span data-en>System design</span><span data-vi>Bản thiết kế hệ thống</span></a></li>
+          <li><a href="assets/docs/xac-nhan-lang-tre-sos.pdf" target="_blank" rel="noopener"><span data-en>SOS confirmation</span><span data-vi>Xác nhận Làng trẻ SOS</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>&copy; 2026 Lê Bá Đức</span>
+      <span>HSGS &middot; Computer Engineering &middot; Hà Nội, Việt Nam</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden>
+  <button class="x" id="lbx" aria-label="Close">&times;</button>
+  <button class="p" id="lbp" aria-label="Previous">&#8249;</button>
+  <img id="lbi" src="" alt="">
+  <button class="n" id="lbn" aria-label="Next">&#8250;</button>
+</div>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
