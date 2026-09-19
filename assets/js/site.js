@@ -1,15 +1,18 @@
 /* ---------- language toggle (persisted per browser) ---------- */
 (function () {
   var html = document.documentElement, btn = document.getElementById('lang');
-  var saved = null;
-  try { saved = localStorage.getItem('lbd-lang'); } catch (e) {}
-  // English is the primary language; Vietnamese is the secondary option
-  html.lang = (saved === 'vi' || saved === 'en') ? saved : 'en';
+  // English is the primary default language for international admissions
+  var saved = 'en';
+  try {
+    var stored = localStorage.getItem('lbd-lang-v2');
+    if (stored === 'vi' || stored === 'en') saved = stored;
+  } catch (e) {}
+  html.lang = saved;
   function sync() { if (btn) btn.textContent = html.lang === 'vi' ? 'EN' : 'VI'; }
   sync();
   if (btn) btn.addEventListener('click', function () {
     html.lang = html.lang === 'vi' ? 'en' : 'vi';
-    try { localStorage.setItem('lbd-lang', html.lang); } catch (e) {}
+    try { localStorage.setItem('lbd-lang-v2', html.lang); } catch (e) {}
     sync();
   });
 })();

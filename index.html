@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Lê Bá Đức — Hồ sơ Kỹ thuật &amp; Nghiên cứu</title>
-<meta name="description" content="Hồ sơ cá nhân và dự án kỹ thuật của Lê Bá Đức — Lớp 12 Lý 2, THPT Chuyên Khoa học Tự nhiên (HSGS). SAT 1590/1600, IELTS 8.0, GPA 9.4, 2 HCV quốc tế, bài báo khoa học IJMSM.">
+<title>Le Ba Duc &mdash; Computer &amp; Electrical Engineering Portfolio</title>
+<meta name="description" content="Technical and research dossier of Le Ba Duc &mdash; Grade 12 Physics 2, High School for Gifted Students (HSGS - VNU Hanoi). SAT 1590/1600 (Math 800), IELTS 8.0, GPA 9.4, 2 International Gold Medals, IJMSM Journal Author.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -17,17 +17,17 @@
   <div class="wrap">
     <a class="brand" href="#about" style="text-decoration:none;color:inherit">
       <span class="mk">LBD</span>
-      <span>Lê Bá Đức<small>COMPUTER &amp; ELECTRICAL ENGINEERING</small></span>
+      <span>Le Ba Duc<small>COMPUTER &amp; ELECTRICAL ENGINEERING</small></span>
     </a>
     <button class="burger" aria-label="Menu" aria-expanded="false" id="burger">&#9776;</button>
     <nav class="mainnav" id="nav">
       <a href="#about"><span data-en>About</span><span data-vi>Bản thân</span></a>
       <a href="#projects"><span data-en>Projects &amp; Awards</span><span data-vi>Dự án &amp; Giải thưởng</span></a>
       <a href="#community"><span data-en>Community</span><span data-vi>Cộng đồng</span></a>
-      <a href="#track"><span data-en>Track</span><span data-vi>Học tập</span></a>
+      <a href="#track"><span data-en>Milestones</span><span data-vi>Học tập</span></a>
       <a href="#contact"><span data-en>Contact</span><span data-vi>Liên hệ</span></a>
     </nav>
-    <button class="langbtn" id="lang">EN</button>
+    <button class="langbtn" id="lang">VI</button>
   </div>
 </div>
 
@@ -129,22 +129,11 @@
         <span data-en>Designed and constructed an automated farm surveillance rig that combines infrared computer vision (YOLO) with ambient IoT telemetry (DHT/MQ sensors) to monitor pig herd behavior 24/7, flag anomalous immobility or aggression, and send early alerts to smallholder farmers.</span><span data-vi>Tự thiết kế và chế tạo hệ thống giám sát trang trại tự động kết hợp camera thị giác máy tính ban đêm (YOLO) và cảm biến môi trường IoT (DHT/MQ): theo dõi tư thế vận động của đàn lợn 24/7, phát hiện sớm dấu hiệu bất thường (nằm bất động, sốt, cắn nhau) và gửi cảnh báo tức thì cho người nuôi.</span>
       </p>
 
-      <!-- THỰC NGHIỆM TRÊN THIẾT BỊ BIÊN -->
-      <div style="margin:22px 0">
-        <a href="assets/img/pig-video-poster.jpg" data-lb style="display:block;overflow:hidden;border-radius:12px;border:1px solid var(--line2)">
-          <img src="assets/img/pig-video-poster.jpg" alt="Real-pen edge YOLO detection results" loading="lazy" style="width:100%;max-height:430px;object-fit:cover;display:block">
-        </a>
-        <div class="meta" style="margin-top:8px;text-align:center">
-          <span data-en>&bull; Real-pen edge deployment: Custom YOLO model detecting piglets (confidence 0.89, 0.74) and tracking behavioral postures &bull;</span>
-          <span data-vi>&bull; Thử nghiệm thực tế trên thiết bị biên: Mô hình YOLO nhận diện đàn lợn con (độ tin cậy 0.89, 0.74) và theo dõi tư thế vận động &bull;</span>
-        </div>
-      </div>
-
       <div class="grid2" style="align-items:start;margin-top:16px">
         <div>
           <h4 style="color:var(--cy);margin-bottom:8px"><span data-en>System architecture &amp; monitoring</span><span data-vi>Kiến trúc hệ thống &amp; Vận hành</span></h4>
           <ul>
-            <li><span data-en><b>24/7 Infrared Edge Camera</b>: Continuous video feed under day and night conditions, performing on-device posture tracking and motion classification.</span><span data-vi><b>Camera AI hồng ngoại 24/7</b>: Ghi hình và phân tích tư thế liên tục cả ngày lẫn đêm, xử lý trực tiếp tại biên để theo dõi vận động đàn lợn.</span></li>
+            <li><span data-en><b>24/7 Infrared Edge Camera</b>: Continuous Day/Night optical coverage, performing on-device posture tracking and motion classification.</span><span data-vi><b>Camera AI hồng ngoại 24/7</b>: Ghi hình và phân tích tư thế liên tục cả ngày lẫn đêm, xử lý trực tiếp tại biên để theo dõi vận động đàn lợn.</span></li>
             <li><span data-en><b>6 Core Behavioral States</b>: Real-time classification of feeding, drinking, standing, walking, resting, and aggressive interactions (ear and tail biting).</span><span data-vi><b>Phân loại 6 hành vi cốt lõi</b>: Tự động nhận diện ăn, uống, đứng, đi lại, nằm nghỉ và các hành vi kích động (cắn tai, cắn đuôi).</span></li>
             <li><span data-en><b>Microclimate &amp; Gas Telemetry</b>: Integrated DHT22 and MQ gas sensors to continuously record barn temperature, humidity, and hazardous gas concentrations (NH&#8323;, CO&#8322;).</span><span data-vi><b>Quan trắc khí độc &amp; nhiệt ẩm</b>: Cảm biến DHT22 và MQ đo liên tục nhiệt độ, độ ẩm cùng nồng độ các khí độc hại trong chuồng nuôi (NH&#8323;, CO&#8322;).</span></li>
             <li><span data-en><b>Two-Stage Alarm System</b>: Fires on-site warning sirens/strobes while simultaneously streaming push alert snapshots to the farmer's web dashboard.</span><span data-vi><b>Cảnh báo hai lớp tức thì</b>: Kích hoạt đèn còi cảnh báo tại chỗ, đồng thời gửi thông báo kèm ảnh chụp snapshot lên ứng dụng web cho người chăn nuôi.</span></li>
@@ -161,13 +150,14 @@
 
       <!-- THƯ VIỆN HÌNH ẢNH KỸ THUẬT COMPUTER VISION -->
       <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
-        <h4 style="font-size:.95rem;color:var(--cy);margin-bottom:6px"><span data-en>Computer vision pipeline &amp; experimental analysis</span><span data-vi>Quy trình phân tích thị giác máy tính &amp; Thử nghiệm thực tế</span></h4>
-        <p style="font-size:.88rem;color:var(--dim);margin-bottom:12px"><span data-en>Multi-object tracking, segmentation mask evaluation, and 15-keypoint skeletal pose estimation across nursery and finisher pens:</span><span data-vi>Quá trình định danh theo dõi đa đối tượng, thử nghiệm mặt nạ phân vùng và ước lượng tư thế 15 điểm xương trên đàn lợn con và lợn thịt:</span></p>
-        <div class="gal" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
-          <a href="assets/img/pig-cv-tracking.jpg" data-lb><img src="assets/img/pig-cv-tracking.jpg" alt="Định danh và theo dõi đa cá thể heo trong chuồng nuôi (Multi-object tracking)" loading="lazy"></a>
-          <a href="assets/img/pig-mask-segmentation.jpg" data-lb><img src="assets/img/pig-mask-segmentation.jpg" alt="Thử nghiệm theo dõi hành vi bằng mặt nạ phân vùng (Segmentation masks)" loading="lazy"></a>
-          <a href="assets/img/pig-pose-estimation-1.jpg" data-lb><img src="assets/img/pig-pose-estimation-1.jpg" alt="Ước lượng tư thế bằng 15 điểm xương giải phẫu (Pose estimation on nursery pigs)" loading="lazy"></a>
-          <a href="assets/img/pig-pose-estimation-2.jpg" data-lb><img src="assets/img/pig-pose-estimation-2.jpg" alt="Theo dõi tư thế và phân loại hành vi trên đàn lợn thịt (Finisher pigs pose tracking)" loading="lazy"></a>
+        <h4 style="font-size:.95rem;color:var(--cy);margin-bottom:6px"><span data-en>Computer vision pipeline &amp; experimental field testing</span><span data-vi>Quy trình thị giác máy tính &amp; Thử nghiệm thực tế</span></h4>
+        <p style="font-size:.88rem;color:var(--dim);margin-bottom:12px"><span data-en>On-device YOLO piglet detection, multi-object tracking, segmentation mask benchmarks, and 15-keypoint skeletal pose estimation:</span><span data-vi>Nhận diện đàn lợn bằng YOLO trên thiết bị biên, định danh theo dõi đa đối tượng, thử nghiệm mặt nạ phân vùng và ước lượng tư thế 15 điểm xương:</span></p>
+        <div class="gal" style="grid-template-columns:repeat(auto-fit,minmax(210px,1fr))">
+          <a href="assets/img/pig-yolo-detection.jpg" data-lb><img src="assets/img/pig-yolo-detection.jpg" alt="Real-pen edge YOLO detection results (confidence 0.89, 0.74)" loading="lazy"></a>
+          <a href="assets/img/pig-cv-tracking.jpg" data-lb><img src="assets/img/pig-cv-tracking.jpg" alt="Multi-object tracking across pen partitions" loading="lazy"></a>
+          <a href="assets/img/pig-mask-segmentation.jpg" data-lb><img src="assets/img/pig-mask-segmentation.jpg" alt="Instance segmentation masks benchmark" loading="lazy"></a>
+          <a href="assets/img/pig-pose-estimation-1.jpg" data-lb><img src="assets/img/pig-pose-estimation-1.jpg" alt="15-keypoint skeletal pose estimation on nursery pigs" loading="lazy"></a>
+          <a href="assets/img/pig-pose-estimation-2.jpg" data-lb><img src="assets/img/pig-pose-estimation-2.jpg" alt="Posture and locomotion classification on finisher pigs" loading="lazy"></a>
         </div>
       </div>
 
@@ -206,8 +196,8 @@
             <div class="rank"><span data-en>Gold Medal &amp; Special Award</span><span data-vi>Huy chương Vàng &amp; Giải Đặc biệt</span></div>
             <h4 style="margin-top:4px;font-size:1.05rem">ICPC 2026 &mdash; International Creative Papers Conference &amp; Olympic</h4>
             <p style="font-size:.92rem"><span data-en><b>Project:</b> <i>&ldquo;Broad-Spectrum Mental Health Detection: A Novel AI Model with Diverse Data Integration&rdquo;</i> &mdash; a multimodal deep-learning model combining physiological, behavioral, and linguistic indicators to recognize early risk factors in adolescents with minimal false negatives.</span><span data-vi><b>Đề tài:</b> <i>&ldquo;Broad-Spectrum Mental Health Detection: A Novel AI Model with Diverse Data Integration&rdquo;</i> &mdash; mô hình AI đa phương thức (multimodal AI) kết hợp chỉ số sinh lý, hành vi và ngôn ngữ để sàng lọc sớm các dấu hiệu rủi ro sức khỏe tâm lý ở học sinh.</span></p>
-            <div class="meta" style="margin-top:6px">KUIA &middot; 01/2026 &middot; Seoul, Hàn Quốc &middot; <b>Vai trò: Team Leader</b></div>
-            <div style="margin-top:12px;max-width:280px"><img src="assets/img/award-gold-special-award-international-creative-papers-c.jpg" alt="Chứng nhận Huy chương Vàng ICPC 2026" style="border-radius:8px;border:1px solid var(--line);width:100%;height:200px;object-fit:cover;object-position:top"></div>
+            <div class="meta" style="margin-top:6px"><span data-en>KUIA &middot; Jan 2026 &middot; Seoul, South Korea &middot; <b>Role: Team Leader</b></span><span data-vi>KUIA &middot; 01/2026 &middot; Seoul, Hàn Quốc &middot; <b>Vai trò: Team Leader</b></span></div>
+            <div style="margin-top:12px;max-width:280px"><img src="assets/img/award-gold-special-award-international-creative-papers-c.jpg" alt="ICPC 2026 Gold Medal Certificate" style="border-radius:8px;border:1px solid var(--line);width:100%;height:200px;object-fit:cover;object-position:top"></div>
           </div>
         </div>
 
@@ -218,8 +208,8 @@
             <div class="rank"><span data-en>Gold Medal</span><span data-vi>Huy chương Vàng</span></div>
             <h4 style="margin-top:4px;font-size:1.05rem">AIGC 2025 &mdash; International AI Generated Content Competition</h4>
             <p style="font-size:.92rem"><span data-en><b>Project:</b> <i>&ldquo;Application of AI and Smart Sensors in Household Water Safety Monitoring and Alert System&rdquo;</i> &mdash; an embedded sensor module paired with predictive AI logic to continuously inspect domestic water quality and detect sudden chemical anomalies.</span><span data-vi><b>Đề tài:</b> <i>&ldquo;Application of AI and Smart Sensors in Household Water Safety Monitoring and Alert System&rdquo;</i> &mdash; hệ thống cảm biến thông minh kết hợp AI theo dõi chất lượng nước sinh hoạt và cảnh báo sớm các bất thường trong gia đình.</span></p>
-            <div class="meta" style="margin-top:6px">AIGC &middot; 05/2025 &middot; Singapore</div>
-            <div style="margin-top:12px;max-width:280px"><img src="assets/img/award-huy-chuong-vang-aigc-2025-international-artificial.jpg" alt="Chứng nhận Huy chương Vàng AIGC 2025" style="border-radius:8px;border:1px solid var(--line);width:100%;height:200px;object-fit:cover;object-position:top"></div>
+            <div class="meta" style="margin-top:6px"><span data-en>AIGC &middot; May 2025 &middot; Singapore</span><span data-vi>AIGC &middot; 05/2025 &middot; Singapore</span></div>
+            <div style="margin-top:12px;max-width:280px"><img src="assets/img/award-huy-chuong-vang-aigc-2025-international-artificial.jpg" alt="AIGC 2025 Gold Medal Certificate" style="border-radius:8px;border:1px solid var(--line);width:100%;height:200px;object-fit:cover;object-position:top"></div>
           </div>
         </div>
       </div>
@@ -242,7 +232,7 @@
 
     <!-- DỰ ÁN 3: BÀI BÁO KHOA HỌC QUỐC TẾ (IJMSM) -->
     <div id="paper" class="card rv" style="border-left:3px solid var(--lime);margin-top:30px;scroll-margin-top:86px">
-      <div class="meta"><span data-en>Published Journal Paper &middot; Peer-Reviewed &middot; 26/05/2026</span><span data-vi>Bài báo khoa học quốc tế &middot; Bình duyệt &middot; 26/05/2026</span></div>
+      <div class="meta"><span data-en>Published Journal Paper &middot; Peer-Reviewed &middot; May 26, 2026</span><span data-vi>Bài báo khoa học quốc tế &middot; Bình duyệt &middot; 26/05/2026</span></div>
       <h3 style="margin-top:8px">
         Applications of AI and IoT to Develop Intelligent Car Parking Systems in Hanoi, Vietnam
       </h3>
@@ -365,17 +355,17 @@
     </div>
     <div class="tl rv">
       <div class="it">
-        <div class="yr">2024 &ndash; 2025 (Lớp 10)</div>
+        <div class="yr"><span data-en>2024 &ndash; 2025 (Grade 10)</span><span data-vi>2024 &ndash; 2025 (Lớp 10)</span></div>
         <h3><span data-en>High school admission &amp; first international gold</span><span data-vi>Trúng tuyển Chuyên KHTN &amp; Huy chương Vàng đầu tiên</span></h3>
         <p><span data-en>Admitted to selective Physics track at HUS High School for Gifted Students (GPA 9.3). Won Gold Medal at AIGC 2025 in Singapore. Began volunteering at SOS Children's Village and initiated smart livestock camera prototype.</span><span data-vi>Trúng tuyển lớp chuyên Lý trường THPT Chuyên KHTN với GPA lớp 10 đạt 9.3. Đoạt Huy chương Vàng AIGC 2025 tại Singapore. Bắt đầu tham gia tình nguyện tại Làng trẻ em SOS và chế tạo nguyên mẫu camera AI chuồng trại.</span></p>
       </div>
       <div class="it">
-        <div class="yr">2025 &ndash; 2026 (Lớp 11)</div>
+        <div class="yr"><span data-en>2025 &ndash; 2026 (Grade 11)</span><span data-vi>2025 &ndash; 2026 (Lớp 11)</span></div>
         <h3><span data-en>Research breakthroughs &amp; standardized scores</span><span data-vi>Nghiên cứu khoa học, thi đấu quốc tế &amp; điểm chuẩn hóa</span></h3>
         <p><span data-en>Maintained 9.4 GPA in grade 11. Won Gold Medal &amp; Special Award at ICPC 2026 in South Korea. Published smart-parking paper in IJMSM journal. Scored SAT 1590/1600 and IELTS Academic 8.0. Volunteered at National Children's Hospital and Tuyên Quang.</span><span data-vi>GPA lớp 11 đạt 9.4. Đoạt Huy chương Vàng kèm Giải Đặc biệt tại ICPC 2026 (Hàn Quốc). Hoàn thành và công bố bài báo khoa học trên tạp chí quốc tế IJMSM. Đạt SAT 1590/1600 và IELTS 8.0. Tích cực tham gia thiện nguyện tại BV Nhi TW và Tuyên Quang.</span></p>
       </div>
       <div class="it">
-        <div class="yr">2026 &ndash; 2027 (Lớp 12)</div>
+        <div class="yr"><span data-en>2026 &ndash; 2027 (Grade 12)</span><span data-vi>2026 &ndash; 2027 (Lớp 12)</span></div>
         <h3><span data-en>Undergraduate applications &amp; deployment</span><span data-vi>Lớp 12 &amp; ứng tuyển đại học quốc tế</span></h3>
         <p><span data-en>Grade 12 Physics 2. Finalizing applications for Computer / Electrical Engineering programs in Singapore, the Netherlands, and Finland. Finalizing on-site testing for the barn monitoring system.</span><span data-vi>Lớp 12 Lý 2. Hoàn thiện hồ sơ ứng tuyển đại học ngành Kỹ thuật Máy tính / Kỹ thuật Điện tại Singapore, Hà Lan và Phần Lan; tiếp tục hoàn thiện thử nghiệm thực tế hệ thống camera giám sát trang trại.</span></p>
       </div>
@@ -401,7 +391,7 @@
           <li><b>Email:</b> <a href="mailto:baducle09@gmail.com" style="color:var(--cy)">baducle09@gmail.com</a></li>
           <li><b><span data-en>Phone:</span><span data-vi>Điện thoại:</span></b> <a href="tel:+84988880735" style="color:var(--ink)">+84 988 880 735</a></li>
           <li><b><span data-en>Location:</span><span data-vi>Khu vực:</span></b> Hanoi, Vietnam</li>
-          <li><b><span data-en>School:</span><span data-vi>Trường:</span></b> THPT Chuyên Khoa học Tự nhiên &mdash; ĐHQG Hà Nội</li>
+          <li><b><span data-en>School:</span><span data-vi>Trường:</span></b> <span data-en>HUS High School for Gifted Students (HSGS - VNU Hanoi)</span><span data-vi>THPT Chuyên Khoa học Tự nhiên &mdash; ĐHQG Hà Nội</span></li>
         </ul>
         <div style="margin-top:20px">
           <a class="btn pri" href="mailto:baducle09@gmail.com">
@@ -436,7 +426,7 @@
 <footer>
   <div class="wrap">
     <div class="copy" style="border-top:none;padding-top:0;margin-top:0">
-      <div>&copy; 2026 Lê Bá Đức &middot; THPT Chuyên Khoa học Tự nhiên (HSGS). All rights reserved.</div>
+      <div>&copy; 2026 Le Ba Duc &middot; <span data-en>HUS High School for Gifted Students (HSGS - VNU). All rights reserved.</span><span data-vi>THPT Chuyên Khoa học Tự nhiên (HSGS). Bảo lưu mọi quyền.</span></div>
       <div><span data-en>Computer &amp; Electrical Engineering Portfolio</span><span data-vi>Hồ sơ ứng tuyển ngành Kỹ thuật Máy tính &amp; Điện tử</span></div>
     </div>
   </div>
