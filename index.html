@@ -129,15 +129,14 @@
         <span data-en>Designed and constructed an automated farm surveillance rig that combines infrared computer vision (YOLO) with ambient IoT telemetry (DHT/MQ sensors) to monitor pig herd behavior 24/7, flag anomalous immobility or aggression, and send early alerts to smallholder farmers.</span><span data-vi>Tự thiết kế và chế tạo hệ thống giám sát trang trại tự động kết hợp camera thị giác máy tính ban đêm (YOLO) và cảm biến môi trường IoT (DHT/MQ): theo dõi tư thế vận động của đàn lợn 24/7, phát hiện sớm dấu hiệu bất thường (nằm bất động, sốt, cắn nhau) và gửi cảnh báo tức thì cho người nuôi.</span>
       </p>
 
-      <!-- VIDEO DEMO THỰC TẾ -->
+      <!-- THỰC NGHIỆM TRÊN THIẾT BỊ BIÊN -->
       <div style="margin:22px 0">
-        <video controls muted playsinline preload="metadata" poster="assets/img/pig-video-poster.jpg" style="width:100%;max-height:430px;border-radius:12px;border:1px solid var(--line2);background:#000;object-fit:contain">
-          <source src="assets/video/pig-monitoring-ai.mp4" type="video/mp4">
-          Trình duyệt của bạn không hỗ trợ phát video MP4.
-        </video>
+        <a href="assets/img/pig-video-poster.jpg" data-lb style="display:block;overflow:hidden;border-radius:12px;border:1px solid var(--line2)">
+          <img src="assets/img/pig-video-poster.jpg" alt="Real-pen edge YOLO detection results" loading="lazy" style="width:100%;max-height:430px;object-fit:cover;display:block">
+        </a>
         <div class="meta" style="margin-top:8px;text-align:center">
-          <span data-en>&bull; Real-pen test footage: Custom YOLO model detecting piglets and tracking behavioral postures in low light &bull;</span>
-          <span data-vi>&bull; Video chạy thử thực tế: Mô hình YOLO nhận diện lợn con (Piglet) và theo dõi tư thế vận động trong chuồng nuôi &bull;</span>
+          <span data-en>&bull; Real-pen edge deployment: Custom YOLO model detecting piglets (confidence 0.89, 0.74) and tracking behavioral postures &bull;</span>
+          <span data-vi>&bull; Thử nghiệm thực tế trên thiết bị biên: Mô hình YOLO nhận diện đàn lợn con (độ tin cậy 0.89, 0.74) và theo dõi tư thế vận động &bull;</span>
         </div>
       </div>
 
@@ -184,9 +183,9 @@
           </a>
         </div>
         <div class="gal">
-          <a href="assets/img/act0-0.jpg" data-lb><img src="assets/img/act0-0.jpg" alt="Sơ đồ kiến trúc tổng thể" loading="lazy"></a>
-          <a href="assets/img/act0-1.jpg" data-lb><img src="assets/img/act0-1.jpg" alt="Lưu đồ tuần tự xử lý tín hiệu" loading="lazy"></a>
-          <a href="assets/img/act0-2.jpg" data-lb><img src="assets/img/act0-2.jpg" alt="Sơ đồ khối vi điều khiển và cảm biến" loading="lazy"></a>
+          <a href="assets/img/act0-0.jpg" data-lb><img src="assets/img/act0-0.jpg" alt="System architecture diagram (Camera AI, Edge, Rule Engine, Web/App)" loading="lazy"></a>
+          <a href="assets/img/act0-1.jpg" data-lb><img src="assets/img/act0-1.jpg" alt="End-to-end signal sequence diagram (Edge inference to multi-tier alert)" loading="lazy"></a>
+          <a href="assets/img/act0-2.jpg" data-lb><img src="assets/img/act0-2.jpg" alt="Edge hardware & sensor interfacing topology (Raspberry Pi, ESP32, Camera, Sensors)" loading="lazy"></a>
         </div>
       </div>
     </div>
