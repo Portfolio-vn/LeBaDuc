@@ -131,7 +131,7 @@
 
       <!-- VIDEO DEMO THỰC TẾ -->
       <div style="margin:22px 0">
-        <video controls playsinline preload="metadata" poster="assets/img/pig-video-poster.jpg" style="width:100%;max-height:430px;border-radius:12px;border:1px solid var(--line2);background:#000;object-fit:contain">
+        <video controls muted playsinline preload="metadata" poster="assets/img/pig-video-poster.jpg" style="width:100%;max-height:430px;border-radius:12px;border:1px solid var(--line2);background:#000;object-fit:contain">
           <source src="assets/video/pig-monitoring-ai.mp4" type="video/mp4">
           Trình duyệt của bạn không hỗ trợ phát video MP4.
         </video>
@@ -143,33 +143,46 @@
 
       <div class="grid2" style="align-items:start;margin-top:16px">
         <div>
-          <h4 style="color:var(--cy);margin-bottom:8px"><span data-en>How the system works</span><span data-vi>Cách thức vận hành</span></h4>
+          <h4 style="color:var(--cy);margin-bottom:8px"><span data-en>System architecture &amp; monitoring</span><span data-vi>Kiến trúc hệ thống &amp; Vận hành</span></h4>
           <ul>
-            <li><span data-en><b>Edge Camera</b>: Equipped with infrared illumination for continuous day/night tracking of herd movement and rest cycles.</span><span data-vi><b>Camera xử lý tại biên</b>: Tích hợp đèn hồng ngoại ghi hình và phân tích tư thế đàn lợn liên tục cả ngày lẫn đêm.</span></li>
-            <li><span data-en><b>6 Core Behaviors</b>: Classifies standing, walking, feeding, drinking, resting, and aggressive interactions (tail biting).</span><span data-vi><b>Theo dõi 6 nhóm hành vi</b>: Đứng, đi lại, ăn, uống, nằm nghỉ và các hành vi hung hăng (cắn tai, cắn đuôi).</span></li>
-            <li><span data-en><b>Microclimate Sensors</b>: DHT and MQ modules monitor ambient temperature, humidity, and toxic gases (NH&#8323;, CO&#8322;).</span><span data-vi><b>Cảm biến vi khí hậu</b>: Cảm biến DHT và MQ liên tục đo nhiệt độ, độ ẩm và nồng độ khí thải độc hại (NH&#8323;, CO&#8322;).</span></li>
-            <li><span data-en><b>Two-Tier Alerts</b>: Fires an immediate on-site buzzer/light and pushes notification snapshots to the farm manager's web app.</span><span data-vi><b>Cảnh báo hai lớp</b>: Kích hoạt còi/đèn tại chỗ khi có sự cố, đồng thời gửi thông báo kèm ảnh chụp lên web app cho người nuôi.</span></li>
+            <li><span data-en><b>24/7 Infrared Edge Camera</b>: Continuous video feed under day and night conditions, performing on-device posture tracking and motion classification.</span><span data-vi><b>Camera AI hồng ngoại 24/7</b>: Ghi hình và phân tích tư thế liên tục cả ngày lẫn đêm, xử lý trực tiếp tại biên để theo dõi vận động đàn lợn.</span></li>
+            <li><span data-en><b>6 Core Behavioral States</b>: Real-time classification of feeding, drinking, standing, walking, resting, and aggressive interactions (ear and tail biting).</span><span data-vi><b>Phân loại 6 hành vi cốt lõi</b>: Tự động nhận diện ăn, uống, đứng, đi lại, nằm nghỉ và các hành vi kích động (cắn tai, cắn đuôi).</span></li>
+            <li><span data-en><b>Microclimate &amp; Gas Telemetry</b>: Integrated DHT22 and MQ gas sensors to continuously record barn temperature, humidity, and hazardous gas concentrations (NH&#8323;, CO&#8322;).</span><span data-vi><b>Quan trắc khí độc &amp; nhiệt ẩm</b>: Cảm biến DHT22 và MQ đo liên tục nhiệt độ, độ ẩm cùng nồng độ các khí độc hại trong chuồng nuôi (NH&#8323;, CO&#8322;).</span></li>
+            <li><span data-en><b>Two-Stage Alarm System</b>: Fires on-site warning sirens/strobes while simultaneously streaming push alert snapshots to the farmer's web dashboard.</span><span data-vi><b>Cảnh báo hai lớp tức thì</b>: Kích hoạt đèn còi cảnh báo tại chỗ, đồng thời gửi thông báo kèm ảnh chụp snapshot lên ứng dụng web cho người chăn nuôi.</span></li>
           </ul>
         </div>
         <div>
-          <h4 style="color:var(--cy);margin-bottom:8px"><span data-en>Technical optimization (Serket Tech benchmark)</span><span data-vi>Tối ưu kỹ thuật &amp; Đối sánh Serket Tech</span></h4>
-          <p style="font-size:.92rem"><span data-en>Drawing insights from commercial precision livestock systems like <a href="https://www.serket-tech.com/news/digital-transformation-in-livestock-management" target="_blank" rel="noopener">Serket Tech</a> (Amsterdam), I optimized the pipeline for affordable hardware:</span><span data-vi>Tham khảo giải pháp chăn nuôi chính xác của <a href="https://www.serket-tech.com/news/digital-transformation-in-livestock-management" target="_blank" rel="noopener">Serket Tech</a> (Hà Lan), em cải tiến phương pháp để hệ thống chạy được trên vi điều khiển giá rẻ:</span></p>
-          <ul style="font-size:.9rem;margin-top:6px">
-            <li><span data-en><b>Pose Estimation over masks</b>: Replaced dense segmentation masks with ~15 skeletal keypoints per pig, cutting edge memory usage by over 80% and allowing reliable inference on low-cost boards.</span><span data-vi><b>Ước lượng tư thế (Pose Estimation)</b>: Thay vì dùng mặt nạ phân vùng (mask) ngốn RAM, em trích xuất ~15 điểm xương giải phẫu, giảm hơn 80% dung lượng bộ nhớ đệm trên chip nhúng.</span></li>
-            <li><span data-en><b>Temporal action transitions</b>: Monitoring prolonged inactivity flags fever or disease early, preventing herd-wide contagion and cutting unnecessary antibiotic use.</span><span data-vi><b>Phát hiện bệnh qua chuỗi thời gian</b>: Theo dõi sự bất động kéo dài giúp phát hiện lợn ốm/sốt sớm, cách ly kịp thời và giảm phụ thuộc vào kháng sinh.</span></li>
+          <h4 style="color:var(--cy);margin-bottom:8px"><span data-en>Computer vision optimization &amp; disease prevention</span><span data-vi>Tối ưu hóa thị giác máy tính &amp; Phòng ngừa dịch bệnh</span></h4>
+          <ul>
+            <li><span data-en><b>Transition from Segmentation Masks to Pose Estimation</b>: While segmentation masks effectively outline pigs, storing full-resolution masks for pens with over 25&ndash;30 pigs exceeds the RAM of low-cost edge microcontrollers. Transitioning to <b>Pose Estimation</b> with 15 skeletal keypoints (snout, ears, spine, hips, tail, legs) cuts edge memory usage by &gt;80% and accelerates inference speed.</span><span data-vi><b>Chuyển từ mặt nạ phân vùng sang ước lượng tư thế (Pose Estimation)</b>: Mặt nạ phân vùng (segmentation mask) tuy định vị được hình thể nhưng ngốn quá nhiều RAM khi mật độ chuồng trên 25&ndash;30 con. Việc chuyển sang <b>Pose Estimation</b> với 15 điểm xương giải phẫu (mõm, tai, cột sống, hông, đuôi, chân) giúp giảm hơn 80% bộ nhớ đệm, tăng tốc độ xử lý rõ rệt trên chip nhúng giá rẻ.</span></li>
+            <li><span data-en><b>Temporal Action Transitions for Early Illness Detection</b>: By modeling activity transitions over time, the system flags prolonged motionless periods (early hypothermia, fever, or death risk) and reduced feeding habits early, enabling swift isolation to prevent herd contagion and cut antibiotic overuse.</span><span data-vi><b>Phát hiện bệnh sớm qua chuỗi thời gian (Temporal Transitions)</b>: Phân tích sự biến đổi hành vi theo thời gian giúp nhận diện sớm hiện tượng lợn nằm bất động quá lâu (dấu hiệu sốt hoặc ủ bệnh) và bỏ ăn, giúp cách ly điều trị kịp thời, bảo vệ toàn đàn và hạn chế lạm dụng thuốc kháng sinh.</span></li>
           </ul>
         </div>
       </div>
 
-      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px">
-        <a class="btn pri" href="assets/docs/ban-thiet-ke-he-thong-pdf.pdf" target="_blank" rel="noopener">
-          <span data-en>View system design document (PDF) &rarr;</span><span data-vi>Xem bản thiết kế hệ thống (PDF) &rarr;</span>
-        </a>
+      <!-- THƯ VIỆN HÌNH ẢNH KỸ THUẬT COMPUTER VISION -->
+      <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+        <h4 style="font-size:.95rem;color:var(--cy);margin-bottom:6px"><span data-en>Computer vision pipeline &amp; experimental analysis</span><span data-vi>Quy trình phân tích thị giác máy tính &amp; Thử nghiệm thực tế</span></h4>
+        <p style="font-size:.88rem;color:var(--dim);margin-bottom:12px"><span data-en>Multi-object tracking, segmentation mask evaluation, and 15-keypoint skeletal pose estimation across nursery and finisher pens:</span><span data-vi>Quá trình định danh theo dõi đa đối tượng, thử nghiệm mặt nạ phân vùng và ước lượng tư thế 15 điểm xương trên đàn lợn con và lợn thịt:</span></p>
+        <div class="gal" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+          <a href="assets/img/pig-cv-tracking.jpg" data-lb><img src="assets/img/pig-cv-tracking.jpg" alt="Định danh và theo dõi đa cá thể heo trong chuồng nuôi (Multi-object tracking)" loading="lazy"></a>
+          <a href="assets/img/pig-mask-segmentation.jpg" data-lb><img src="assets/img/pig-mask-segmentation.jpg" alt="Thử nghiệm theo dõi hành vi bằng mặt nạ phân vùng (Segmentation masks)" loading="lazy"></a>
+          <a href="assets/img/pig-pose-estimation-1.jpg" data-lb><img src="assets/img/pig-pose-estimation-1.jpg" alt="Ước lượng tư thế bằng 15 điểm xương giải phẫu (Pose estimation on nursery pigs)" loading="lazy"></a>
+          <a href="assets/img/pig-pose-estimation-2.jpg" data-lb><img src="assets/img/pig-pose-estimation-2.jpg" alt="Theo dõi tư thế và phân loại hành vi trên đàn lợn thịt (Finisher pigs pose tracking)" loading="lazy"></a>
+        </div>
       </div>
 
-      <!-- SƠ ĐỒ KỸ THUẬT -->
-      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--line)">
-        <h4 style="font-size:.95rem;color:var(--mute)"><span data-en>System schematics &amp; circuit diagrams</span><span data-vi>Sơ đồ thiết kế kiến trúc &amp; khối phần cứng</span></h4>
+      <!-- SƠ ĐỒ KỸ THUẬT PHẦN CỨNG & TÀI LIỆU PDF -->
+      <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:12px">
+          <div>
+            <h4 style="font-size:.95rem;color:var(--mute);margin:0"><span data-en>System schematics &amp; circuit diagrams</span><span data-vi>Sơ đồ thiết kế kiến trúc &amp; khối phần cứng</span></h4>
+            <span class="meta" style="font-size:.8rem"><span data-en>Extracted from full engineering blueprint</span><span data-vi>Trích từ bản thiết kế kỹ thuật nguyên mẫu</span></span>
+          </div>
+          <a class="btn pri" href="assets/docs/ban-thiet-ke-he-thong-pdf.pdf" target="_blank" rel="noopener">
+            <span data-en>System design document (PDF) &rarr;</span><span data-vi>Bản thiết kế hệ thống (PDF) &rarr;</span>
+          </a>
+        </div>
         <div class="gal">
           <a href="assets/img/act0-0.jpg" data-lb><img src="assets/img/act0-0.jpg" alt="Sơ đồ kiến trúc tổng thể" loading="lazy"></a>
           <a href="assets/img/act0-1.jpg" data-lb><img src="assets/img/act0-1.jpg" alt="Lưu đồ tuần tự xử lý tín hiệu" loading="lazy"></a>
