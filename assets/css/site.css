@@ -62,6 +62,12 @@ html[lang="en"] [data-vi]{display:none!important}
   .mainnav a{padding:11px 8px;border-radius:0;border-bottom:1px solid var(--line)}
   .langbtn{margin-left:10px}
 }
+@media(max-width:480px){
+  .topbar .wrap{gap:10px}
+  .brand{min-width:0;flex:1 1 auto;overflow:hidden}
+  .brand small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .langbtn{margin-left:0}
+}
 
 /* ---------- hero ---------- */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
